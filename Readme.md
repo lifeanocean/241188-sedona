@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Валерия Усанова](https://up.htmlacademy.ru/htmlcss/14/user/241188).
-* Наставник: [Олег Зубов](hhttps://up.htmlacademy.ru/htmlcss/14/user/42701).
+* Наставник: [Олег Зубов](https://up.htmlacademy.ru/htmlcss/14/user/42701).
 
 ---
 
