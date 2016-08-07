@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+</head>
+
+<body>
+  <header class="main-header">
+      <div class="container">
+        <nav class="main-navigation">
+          <ul>
+            <li>
+              <a href="#">Информация</a>
+            </li>
+            <li>
+              <a href="#">Фото и видео</a>
+            </li>
+            <li>
+              <div class="header-logo">
+                <a href="#"><img src="http://placehold.it/138x70" alt="Sedona-logo" width="138" height="70"></a>
+              </div>
+            </li>
+            <li>
+              <a href="#">Карта штата</a>
+            </li>
+            <li>
+              <a href="#">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <form action="#" method="get">
+        <div class="infrastructure">
+          <h3>Инфраструктура:</h3>
+            <input id="pool" type="checkbox" name="pool" checked>
+            <label for="pool">Бассейн</label>
+            
+            <input id="parking" type="checkbox" name="parking">
+            <label for="pool">Парковка</label>
+
+            <input id="wi-fi" type="checkbox" name="wi-fi">
+            <label fpr="wi-fi">Wi-Fi</label>
+        </div>
+        <div class="housing">
+          <h3>Тип жилья:</h3>
+            <input id="hotel" type="checkbox" name="hotel" checked>
+            <label for="hotel">Гостиница</label>
+
+            <input id="motel" type="checkbox" name="motel" checked>
+            <label for="motel">Мотель</label>
+
+            <input id="apartments" type="checkbox" name="appartments" checked>
+            <label for="apartments">Апартаменты</label>
+        </div>
+        <div class="cost">
+          <h3>Стоимость в сутки (р):</h3>
+          <input type="range" min="0" max="3000">
+        </div>
+          <button type="submit">Показать</button>
+      </form>
+        
+        <div class="result">
+          <div class="overall">
+            <h2>Найдено:3</h2>
+              <p>Сортировка:</p>
+                <a href="#">По цене</a>
+                <a href="#">По типу</a>
+                <a href="#">По рейтингу</a>
+            <div class="arrow-up"></div>
+            <div class="arrow-down"></div>
+          </div>
+
+          <div class="result-items">
+            <div class="item first">
+              <img src="http://placehold.it/135x90" width="135" height="90" alt="Amara resort & Spa">
+              <h2>Amara resort & SPA</h2>
+              <span class="item-name">Гостиница</span>
+              <span class="item-price">от 3500 Р.</span>
+              <a class="btn information" href="#">Подробнее</a>
+              <a class="btn booking" href="#">Забронировать</a>
+              <div class="stars"></div>
+              <span class="raiting">Рейтинг: 8,5</span>
+            </div>
+
+            <div class="item second">
+              <img src="http://placehold.it/135x90" width="135" height="90" alt="Desert quail inn">
+              <h2>Desert quail inn</h2>
+              <span class="item-name">Мотель</span>
+              <span class="item-price">от 2000 Р.</span>
+              <a class="btn information" href="#">Подробнее</a>
+              <a class="btn booking" href="#">Забронировать</a>
+              <div class="stars"></div>
+              <span class="raiting">Рейтинг: 8,5</span>
+            </div>
+
+            <div class="item third">
+              <img src="http://placehold.it/135x90" width="135" height="90" alt="Villas at poco diablo">
+              <h2>Villas at poco diablo</h2>
+              <span class="item-name">Апартаменты</span>
+              <span class="item-price">от 4000 Р.</span>
+              <a class="btn information" href="#">Подробнее</a>
+              <a class="btn booking" href="#">Забронировать</a>
+              <div class="stars"></div>
+              <span class="raiting">Рейтинг: 9,2</span>
+            </div>
+          </div>
+      </main>
+      <footer class="main-footer">
+        <div class="container">
+          <section class="footer-hashtag">
+            <a href="#" class="hashtag">#Visitsedona</a>
+          </section>
+          <section class="footer-social">
+            <a class="social-btn social-btn-tw" href="#">Твиттер</a>
+            <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+            <a class="social-btn social-btn-yb" href="#">Ютьюб</a>
+          </section>
+          <section class="footer-copyright">
+            <span>Website by</span>
+              <a href="https://htmlacademy.ru">
+              <img src="http://placehold.it/90x20" width="113" height="39" alt="htmlacademy.ru">
+              </a>
+          </section>
+        </div>
+      </footer>
+    <script></script>
+  </body>
+</html>
