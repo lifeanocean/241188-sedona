@@ -38,8 +38,6 @@
             <div class="welcome-block-text">
                 <img src="http://placehold.it/458x352" alt="Welcome to Sedona!" width="458" height="352">
             </div>
-            <div class="welcome-block-mask">	
-            </div>
         </div>
 
         <section class="description">
@@ -134,9 +132,12 @@
             </div>
 
 
-            <div class="booking-form">
-                <h3>Поиск гостиницы в Седоне</h3>
+            <div class="booking-block">
+
+                <button class="btn btn-booking" type="submit">Поиск гостиницы в Седоне</button>
+
                 <form action="#" method="get">
+
                     <label for="checkin">Дата заезда:</label>
                     <input type="date" id="checkin" name="checkin" value="24 апреля 2016">
 
@@ -149,14 +150,18 @@
                     <label for="kids">Дети:</label>
                     <input type="number" id="kids" name="kids" step="1" value="0">
 
-                    <button class="btn btn-booking" type="submit" name="search-hotels">Найти</button>
-                </form>
+                    <button class="btn btn-search" type="submit" name="search-hotels">Найти</button>
+
+                </block>
+
             </div>
+
         </section>
 
         <div class="map">
             <img src="img/index-map.jpg" width="1200" height="593" alt="Карта Седоны">
         </div>
+
     </main>
 
     <footer class="main-footer">
