@@ -34,56 +34,78 @@
 	</header>
 
 	<main class="container">
-		<form action="#" method="get">
-			<div class="infrastructure">
-				<h3>Инфраструктура:</h3>
-				<input id="pool" type="checkbox" name="pool" checked>
-				<label for="pool">Бассейн</label>
 
-				<input id="parking" type="checkbox" name="parking">
-				<label for="parking">Парковка</label>
+		<div class="filter-field">
 
-				<input id="wi-fi" type="checkbox" name="wi-fi">
-				<label for="wi-fi">Wi-Fi</label>
-			</div>
+			<form action="#" method="get">
 
-			<div class="housing">
-				<h3>Тип жилья:</h3>
-				<input id="hotel" type="checkbox" name="hotel" checked>
-				<label for="hotel">Гостиница</label>
+				<div class="filter-field-column infrastructure">
 
-				<input id="motel" type="checkbox" name="motel" checked>
-				<label for="motel">Мотель</label>
+					<span>Инфраструктура:</span>
 
-				<input id="apartments" type="checkbox" name="apartments" checked>
-				<label for="apartments">Апартаменты</label>
-			</div>
+					<input id="pool" type="checkbox" name="infrastructure" value="pool" checked>
+					<label for="pool">Бассейн</label>
 
-			<div class="cost">
-				<span>Стоимость в сутки (р):</span>
+					<input id="parking" type="checkbox" name="infrastructure" value="parking">
+					<label for="parking">Парковка</label>
 
-				<label for="min">от</label>
-				<input id="min" type="text" name="min">
-				<label for="max">до</label>   
-				<input id="max" type="text" name="max">
+					<input id="wi-fi" type="checkbox" name="infrastructure" value="wi-fi">
+					<label for="wi-fi">Wi-Fi</label>infrastructure
 
-				<div class="range-container">
-					<div class="range-line"></div>
-					<div class="range-runner range-runner-left"></div>
-					<div class="range-runner range-runner-right"></div>
 				</div>
 
-				<button type="submit">Показать</button>
-			</div>
-		</form>
+				<div class="filter-field-column housing">
 
-		<div class="result">
-	
-			<div class="result-sort-block">
+					<span>Тип жилья:</span>
+
+					<input id="hotel" type="checkbox" name="housing" value="hotel" checked>
+					<label for="hotel">Гостиница</label>
+
+					<input id="motel" type="checkbox" name="housing" value="motel" checked>
+					<label for="motel">Мотель</label>
+
+					<input id="apartments" type="checkbox" name="housing" value="apartments" checked>
+					<label for="apartments">Апартаменты</label>
+
+				</div>
+
+				<div class="filter-field-block cost">
+
+					<span>Стоимость в сутки (р):</span>
+
+					<label for="min">от</label>
+					<input id="min" type="text" name="min">
+
+					<label for="max">до</label>   
+					<input id="max" type="text" name="max">
+
+					<div class="range-container">
+
+						<div class="range-line"></div>
+						<div class="range-runner range-runner-left"></div>
+						<div class="range-runner range-runner-right"></div>
+
+					</div>
+
+					<button type="submit">Показать</button>
+
+				</div>
+			</form>
+		</div>
+
+
+		<div class="sort-result">
+
+			<div class="sort-result-block">
+
 				<span>Найдено: <span>3</span></span>
+
 				<span>Сортировка:</span>
+
 				<form>
+
 					<div class="sort-variant-container">
+
 						<label for="sort-price">По цене</label>
 						<input id="sort-price" type="radio" name="sort" value="price">
 
@@ -91,11 +113,13 @@
 						<input id="sort-type" type="radio" name="sort" value="type">
 
 						<label for="sort-rating">По рейтингу</label>
-						<input id="sort-rating" type="radio" name="sort" value="raiting">							
+						<input id="sort-rating" type="radio" name="sort" value="raiting">	
+
 					</div>
 
-					
+
 					<div class="sort-order-container">
+
 						<label for="sort-order-asc">Up</label>
 						<input id="sort-order-asc" type="radio" name="order" value="asc">
 
@@ -107,40 +131,43 @@
 			</div>
 
 			<div class="result-block">
-				<div class="results-item first">
+
+				<div class="result-block-item first">
+
 					<img src="http://placehold.it/135x90" width="135" height="90" alt="Amara resort & Spa">
 					<h2>Amara resort & SPA</h2>
-					<span class="results-item-name">Гостиница</span>
-					<span class="results-item-price">от 3500 Р.</span>
+					<span class="item-name">Гостиница</span>
+					<span class="item-price">от 3500 Р.</span>
 					<a class="btn btn-information" href="#">Подробнее</a>
 					<a class="btn btn-booking" href="#">Забронировать</a>
 					<div class="stars"></div>
 					<span class="raiting">Рейтинг: 8,5</span>
 				</div>
 
-				<div class="results-item second">
+				<div class="result-block-item second">
 					<img src="http://placehold.it/135x90" width="135" height="90" alt="Desert quail inn">
 					<h2>Desert quail inn</h2>
-					<span class="results-item-name">Мотель</span>
-					<span class="results-item-price">от 2000 Р.</span>
+					<span class="item-name">Мотель</span>
+					<span class="item-price">от 2000 Р.</span>
 					<a class="btn btn-information" href="#">Подробнее</a>
 					<a class="btn btn-booking" href="#">Забронировать</a>
 					<div class="stars"></div>
 					<span class="raiting">Рейтинг: 8,5</span>
 				</div>
 
-				<div class="results-item third">
+				<div class="result-block-item third">
 					<img src="http://placehold.it/135x90" width="135" height="90" alt="Villas at poco diablo">
 					<h2>Villas at poco diablo</h2>
-					<span class="results-item-name">Апартаменты</span>
-					<span class="results-item-price">от 4000 Р.</span>
+					<span class="item-name">Апартаменты</span>
+					<span class="item-price">от 4000 Р.</span>
 					<a class="btn btn-information" href="#">Подробнее</a>
 					<a class="btn btn-booking" href="#">Забронировать</a>
 					<div class="stars"></div>
 					<span class="raiting">Рейтинг: 9,2</span>
 				</div>
+				
 			</div>
-			
+
 		</div>
 	</main>
 	<footer class="main-footer">
