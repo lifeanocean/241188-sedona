@@ -1,6 +1,5 @@
 body {
-    
-    font-size: 14px;
+     font-size: 14px;
     line-height: 26px;
     color: #333333;
     font-family: PTSans;
@@ -11,7 +10,6 @@ h2 {
     line-height: 24px;
     color: #000000;
     font-weight: bold;
-    font-family: PTSans;
 }
 
 h3 {
@@ -19,5 +17,4 @@ h3 {
     line-height: 26px;
     color: #000000;
     font-weight: bold;
-    font-family: PTSans;
 }
