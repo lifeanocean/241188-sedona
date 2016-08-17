@@ -1,8 +1,9 @@
 body {
-     font-size: 14px;
+    font-size: 14px;
     line-height: 26px;
     color: #333333;
-    font-family: PTSans;
+    font-family: PTSans, "Arial", "sans-serif";
+    text-transform: uppercase;
 }
 
 h2 {
@@ -17,4 +18,189 @@ h3 {
     line-height: 26px;
     color: #000000;
     font-weight: bold;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+  }
+
+.container {
+    min-width: 768px;
+    max-width: 1200px;
+    padding: 0 40px;
+    margin: 0 auto;
+    position: relative;
+
+    background-color:#949303; /*вспомогательный стиль*/
+}
+
+.main-header {
+    position: relative;
+
+    outline: 1px solid blue; /*вспомогательный стиль*/
+
+}
+
+.header-logo {
+    display: inline-block;
+    position: absolute;
+    width: 138px;
+    height: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navigation-list {
+    font-size: 0;
+    padding: 0;
+}
+.navigation-list li {
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 20%;
+    vertical-align: top;
+    font-size: 14px;
+    text-align: center;
+
+
+    outline: 1px solid #666; /*вспомогательный стиль*/
+}
+
+.navigation-list li:nth-child(4n-2){
+  margin-right: 20%;
+}
+
+.welcome-block {
+    min-height: 508px;
+    text-align: center;
+    padding-top: 76px;
+    background: url("../img/index/mask.png") no-repeat center bottom,
+    #8b99a2 url("../img/index/background-main.jpg") no-repeat  50% 40%;
+    background-size: auto, cover;
+    margin-bottom: 58px;
+
+    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+
+.welcome-block img {
+    width:458px;
+    height:352px;
+
+    outline: 1px solid black; /*вспомогательный стиль*/
+
+}
+
+.slogan {
+    outline: 1px solid green; /*вспомогательный стиль*/
+}
+.slogan-title {
+    width: 576px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 27px;
+
+    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+
+.slogan-text {
+    width: 576px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 51px;
+    line-height: 26px;
+
+    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+
+.benefit-block-compound {
+    height: 256px;
+}
+
+.benefit-block-plain {
+    height: 330px;
+
+}
+
+.benefit-block-info {
+    float: left;
+    width: calc(100%/3);
+    height: 100%;
+    text-align: center;
+
+    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+
+.benefit-block-image {
+    float: left;
+    height: 100%;
+    width: calc(100%/3*2);
+
+    outline: 1px solid red; /*вспомогательный стиль*/
+}
+
+.town-image {
+    background: url("../img/index/benefit-1.jpg") no-repeat center;
+    background-size: 100% auto;
+}
+
+.bridge-image {
+    background: url("../img/index/benefit-2.jpg") no-repeat center;
+    background-size: 100% auto;
+}
+
+.booking {
+
+}
+
+.booking-header {
+    width: 576px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 56px;
+
+    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+
+.booking-block {
+    width: 576px;
+    margin: 0 auto;
+    text-align: center;
+
+    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+
+.main-footer {
+  width: 100%;
+  font-size: 0;  
+  background-color: #ffffff;
+}
+
+.footer-hashtag,
+.footer-social,
+.footer-copyright {
+   display: inline-block;
+   width: calc(100%/3);
+   text-align: center;
+
+   outline: 1px solid blue; /*вспомогательный стиль*/
+}
+
+.footer-hashtag {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+}
+.footer-social,
+.footer-copyright {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+
+
+.footer-copyright img {
+  vertical-align: middle;
 }
