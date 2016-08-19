@@ -8,13 +8,14 @@
 </head>
 
 <body>
-	<header class="main-header">
-		<div class="container">
+	<div class="container">
+		<header class="main-header">
+
 			<div class="header-logo">
 				<a href="#"><img src="img/logo.png" alt="Sedona-logo" width="138" height="70"></a>
 			</div>
-			<nav class="main-navigation">
-				<ul>
+			<nav>
+				<ul class="main-navigation">
 					<li>
 						<a href="#">Информация</a>
 					</li>
@@ -29,106 +30,107 @@
 					</li>
 				</ul>
 			</nav>
-		</div>
-	</header>
 
-	<main class="container">
+		</header>
 
-		<div class="filter-field">
+		<main>
 
-			<form action="#" method="get">
+			<div class="filter-field clearfix">
 
-				<div class="filter-field-column infrastructure">
+				<form action="#" method="get">
 
-					<span>Инфраструктура:</span>
+					<div class="filter-field-column infrastructure">
 
-					<input id="pool" type="checkbox" name="infrastructure" value="pool" checked>
-					<label for="pool">Бассейн</label>
+						<span>Инфраструктура:</span>
 
-					<input id="parking" type="checkbox" name="infrastructure" value="parking">
-					<label for="parking">Парковка</label>
+						<p>
+							<input id="pool" type="checkbox" name="infrastructure" value="pool" checked>
+							<label for="pool">Бассейн</label>
+						</p>
 
-					<input id="wi-fi" type="checkbox" name="infrastructure" value="wi-fi">
-					<label for="wi-fi">Wi-Fi</label>infrastructure
+						<p>
+							<input id="parking" type="checkbox" name="infrastructure" value="parking">
+							<label for="parking">Парковка</label>
+						</p>
 
-				</div>
-
-				<div class="filter-field-column housing">
-
-					<span>Тип жилья:</span>
-
-					<input id="hotel" type="checkbox" name="housing" value="hotel" checked>
-					<label for="hotel">Гостиница</label>
-
-					<input id="motel" type="checkbox" name="housing" value="motel" checked>
-					<label for="motel">Мотель</label>
-
-					<input id="apartments" type="checkbox" name="housing" value="apartments" checked>
-					<label for="apartments">Апартаменты</label>
-
-				</div>
-
-				<div class="filter-field-block cost">
-
-					<span>Стоимость в сутки (р):</span>
-
-					<label for="min">от</label>
-					<input id="min" type="text" name="min">
-
-					<label for="max">до</label>   
-					<input id="max" type="text" name="max">
-
-					<div class="range-container">
-
-						<div class="range-line"></div>
-						<div class="range-runner range-runner-left"></div>
-						<div class="range-runner range-runner-right"></div>
+						<p>
+							<input id="wi-fi" type="checkbox" name="infrastructure" value="wi-fi">
+							<label for="wi-fi">Wi-Fi</label>
+						</p>
 
 					</div>
 
-					<button type="submit">Показать</button>
+					<div class="filter-field-column housing">
 
-				</div>
-			</form>
-		</div>
+						<span>Тип жилья:</span>
 
+						<p>
+							<input id="hotel" type="checkbox" name="housing" value="hotel" checked>
+							<label for="hotel">Гостиница</label>
+						</p>
 
-		<div class="sort-result">
+						<p>
+							<input id="motel" type="checkbox" name="housing" value="motel" checked>
+							<label for="motel">Мотель</label>
+						</p>
 
-			<div class="sort-result-block">
-
-				<span>Найдено: <span>3</span></span>
-
-				<span>Сортировка:</span>
-
-				<form>
-
-					<div class="sort-variant-container">
-
-						<label for="sort-price">По цене</label>
-						<input id="sort-price" type="radio" name="sort" value="price">
-
-						<label for="sort-type">По типу</label>
-						<input id="sort-type" type="radio" name="sort" value="type">
-
-						<label for="sort-rating">По рейтингу</label>
-						<input id="sort-rating" type="radio" name="sort" value="raiting">	
+						<p>
+							<input id="apartments" type="checkbox" name="housing" value="apartments" checked>
+							<label for="apartments">Апартаменты</label>
+						</p>
 
 					</div>
 
+					<div class="filter-field-block cost">
 
-					<div class="sort-order-container">
+						<span>Стоимость в сутки (р):</span>
 
-						<label for="sort-order-asc">Up</label>
-						<input id="sort-order-asc" type="radio" name="order" value="asc">
+						<label for="min">от</label>
+						<input id="min" type="text" name="min">
 
-						<label for="sort-order-desc">Down</label>
-						<input id="sort-order-desc" type="radio" name="order" value="desc">							
+						<label for="max">до</label>   
+						<input id="max" type="text" name="max">
+
+						<div class="range-container">
+
+							<div class="range-line"></div>
+							<div class="range-runner range-runner-left"></div>
+							<div class="range-runner range-runner-right"></div>
+
+						</div>
+
+						<button type="submit">Показать</button>
+
 					</div>
-
-				</form> 				
+				</form>
 			</div>
 
+
+			<div class="sort-result clearfix">
+
+				<div class="sort-result-container">
+					<span>Найдено: <span>3</span></span>
+				</div>
+
+				<div class="sort-variant-container">
+
+					<span>Сортировка:</span>
+
+					<div class="sort-variant-block"><a href="#">По цене</a></div>
+
+					<div class="sort-variant-block"><a href="#"h>По типу</a></div>
+
+					<div class="sort-variant-block"><a href="#">По рейтингу</a></div>
+
+				</div>
+
+
+				<div class="sort-order-container">
+					<a href="#">Up</a>
+
+					<a href="#">Down</a>								
+				</div>	
+			</div>
 			<div class="result-block">
 
 				<div class="result-block-item">
@@ -196,23 +198,24 @@
 		</main>
 
 		<footer class="main-footer">
-			<div class="container">
-				<section class="footer-hashtag">
-					<a href="#" class="hashtag">#Visitsedona</a>
-				</section>
-				<section class="footer-social">
-					<a class="social-btn social-btn-tw" href="#">Твиттер</a>
-					<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-					<a class="social-btn social-btn-yb" href="#">Ютьюб</a>
-				</section>
-				<section class="footer-copyright">
-					<span>Website by</span>
-					<a href="https://htmlacademy.ru">
-						<img src="img/logo-academy.png" width="113" height="39" alt="htmlacademy.ru">
-					</a>
-				</section>
-			</div>
+
+			<section class="footer-hashtag">
+				<a href="#" class="hashtag">#Visitsedona</a>
+			</section>
+			<section class="footer-social">
+				<a class="social-btn social-btn-tw" href="#">Твиттер</a>
+				<a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+				<a class="social-btn social-btn-yb" href="#">Ютьюб</a>
+			</section>
+			<section class="footer-copyright">
+				<span>Website by</span>
+				<a href="https://htmlacademy.ru">
+					<img src="img/logo-academy.png" width="113" height="39" alt="htmlacademy.ru">
+				</a>
+			</section>
+
 		</footer>
-		<script></script>
-	</body>
-	</html>
+	</div>
+	<script></script>
+</body>
+</html>

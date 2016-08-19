@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Седона</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -13,8 +14,8 @@
 				<a href="#"><img src="img/logo.png" alt="Sedona-logo" width="138" height="70"></a>
 			</div>
 
-			<nav class="main-navigation">
-				<ul class="navigation-list">
+			<nav>
+				<ul class="main-navigation">
 					<li>
 						<a href="#">Информация</a>
 					</li>
@@ -48,73 +49,60 @@
 			</section>
 
 			<section class="benefit">
-
-				<div class="benefit-block-compound clearfix">
-
-					<div class="benefit-block-info">
-						<h3>Настоящий городок</h3>
-						<p>№1</p>
+				<div class="table-row">
+					<div class="table-cell col-1 benefit-block benefit-block-info">
+						<h3 class="benefit-block-title">Настоящий<br>городок</h3>
+						<p class="text-crossed">№1</p>
 						<p>Cедона не атракцион для туристов, там течет своя жизнь</p>
 					</div>
-
-
-					<div class="benefit-block-image town-image"></div>
-
+					<div class="table-cell col-2 benefit-block-image town-image"></div>
 				</div>
 
-				<div class="benefit-block-plain clearfix">
-
-					<div class="benefit-block-info benefit-housing">
-						<h3>Жилье</h3>
+				<div class="row">
+					<div class="col-1 benefit-block">
+						<div class="benefit-block-icon icon-housing"></div>
+						<h3 class="benefit-block-title">Жилье</h3>
 						<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
 					</div>
-
-					<div class="benefit-block-info benefit-food">
-						<h3>Еда</h3>
+					<div class="col-1 benefit-block">
+						<div class="benefit-block-icon icon-food"></div>
+						<h3 class="benefit-block-title">Еда</h3>
 						<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
 					</div>
-
-					<div class="benefit-block-info benefit-souvenirs">  
-						<h3>Сувениры</h3>
+					<div class="col-1 benefit-block">
+						<div class="benefit-block-icon icon-souvenirs"></div>
+						<h3 class="benefit-block-title">Сувениры</h3>
 						<p>Не только китайского, но и местного производства!</p>
 					</div>
-
 				</div>
 
-
-				<div class="benefit-block-compound clearfix">
-
-					<div class="benefit-block-info">
-						<h3>Там есть мост дьявола</h3>
-						<p>№2</p>
+				<div class="table-row">
+					<div class="table-cell col-2 benefit-block-image bridge-image"></div>
+					<div class="table-cell col-1 benefit-block benefit-block-info">
+						<h3 class="benefit-block-title">Там&nbsp;есть<br>мост&nbsp;дьявола</h3>
+						<p class="text-crossed">№2</p>
 						<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 					</div>
-
-					<div class="benefit-block-image bridge-image"></div>
 				</div>
 
-				<div class="benefit-block-plain benefit-block-last clearfix">
-
-					<div class="benefit-block-info">
-						<h3>Небольшая площадь</h3>
-						<p>№3</p>
-						<p>Все достопремечательности находятся очень близко</p>
+				<div class="row bg-gray">
+					<div class="col-1 benefit-block">
+						<h3 class="benefit-block-title">Небольшая<br>площадь</h3>
+						<p class="text-crossed">№3</p>
+						<p>Все достопремечательности находятся&nbsp;очень&nbsp;близко</p>
 					</div>
-
-					<div class="benefit-block-info">
-						<h3>Красивая дорога</h3>
-						<p>№4</p>
-						<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+					<div class="col-1 benefit-block">
+						<h3 class="benefit-block-title">Красивая<br>дорога</h3>
+						<p class="text-crossed">№4</p>
+						<p>Ехать&nbsp;в&nbsp;Седону&nbsp;из&nbsp;Лас-Вегаса&nbsp;совсем не&nbsp;скучно!</p>
 					</div>
-
-
-
-					<div class="benefit-block-info">
-						<h3>Мало туристов</h3>
-						<p>№5</p>
-						<p>Большинство едет в Гранд Каньон и толпится там</p>
+					<div class="col-1 benefit-block">
+						<h3 class="benefit-block-title">Мало<br>туристов</h3>
+						<p class="text-crossed">№5</p>
+						<p>Большинство&nbsp;едет в&nbsp;Гранд&nbsp;Каньон&nbsp;и толпится&nbsp;там</p>
 					</div>
 				</div>
+			</section>
 			</section>
 
 			<section class="booking">
@@ -152,7 +140,7 @@
 			</section>
 
 			<div class="map">
-				<img src="img/index-map.jpg" width="1200" height="593" alt="Карта Седоны">
+				
 			</div>
 
 		</main>

@@ -1,8 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-size: 14px;
     line-height: 26px;
     color: #333333;
-    font-family: PTSans, "Arial", "sans-serif";
+    font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
     text-transform: uppercase;
 }
 
@@ -20,11 +25,16 @@ h3 {
     font-weight: bold;
 }
 
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-  }
+
+.text-crossed:before,
+.text-crossed:after {
+    content: "\2014";
+    margin: 0 5pt;
+}
+
+.bg-gray {
+    background: #eee;
+}
 
 .container {
     min-width: 768px;
@@ -32,8 +42,6 @@ h3 {
     padding: 0 40px;
     margin: 0 auto;
     position: relative;
-
-    background-color:#949303; /*вспомогательный стиль*/
 }
 
 .main-header {
@@ -52,11 +60,11 @@ h3 {
     transform: translateX(-50%);
 }
 
-.navigation-list {
+.main-navigation {
     font-size: 0;
     padding: 0;
 }
-.navigation-list li {
+.main-navigation li {
     display: inline-block;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -64,13 +72,13 @@ h3 {
     vertical-align: top;
     font-size: 14px;
     text-align: center;
-
-
-    outline: 1px solid #666; /*вспомогательный стиль*/
 }
-
-.navigation-list li:nth-child(4n-2){
+.main-navigation li:nth-child(4n-2){
   margin-right: 20%;
+}
+.main-navigation a {
+    color: black;
+    font-weight: bold;
 }
 
 .welcome-block {
@@ -115,40 +123,100 @@ h3 {
     outline: 1px solid blue; /*вспомогательный стиль*/
 }
 
-.benefit-block-compound {
-    height: 256px;
+/*.row::before,*/
+.row::after,
+/*.clearfix::before,*/
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.benefit-block-plain {
-    height: 330px;
-
+.table-row {
+    display: table-row;
+    
+    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+.table-cell {
+    display: table-cell;
+    outline: 1px solid blue; /*вспомогательный стиль*/
 }
 
-.benefit-block-info {
-    float: left;
+.col-1 {
     width: calc(100%/3);
-    height: 100%;
-    text-align: center;
+    box-sizing: border-box;
+
+    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+.col-2 {
+    width: calc(100%/3*2);
+    box-sizing: border-box;
 
     outline: 1px solid blue; /*вспомогательный стиль*/
 }
 
-.benefit-block-image {
+.row [class*=col-],
+.form-row [class*=col-] {
     float: left;
-    height: 100%;
-    width: calc(100%/3*2);
+}
 
-    outline: 1px solid red; /*вспомогательный стиль*/
+.benefit-block {
+    padding: 45px 50px;
+    text-align: center;
+}
+
+.benefit-block .benefit-block-title,
+.benefit-block .benefit-block-icon,
+/*.benefit-block img,*/
+.benefit-block p {
+    margin-bottom: 20px;
+}
+.benefit-block .benefit-block-icon,
+/*.benefit-block img*/ {
+    margin-top: 20px;
+}
+.benefit-block.benefit-block-info :last-child {
+    margin-bottom: 0;
+}
+
+.benefit-block-info {
+    background: #81b3d2;
+}
+
+.benefit-block-info,
+.benefit-block-info .benefit-block-title {
+    color: white;
+}
+
+.benefit-block-icon {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.benefit-block-icon.icon-food {
+    background-image: url(../img/icons/icon-food.png);
+}
+.benefit-block-icon.icon-housing {
+    background-image: url(../img/icons/icon-housing.png);
+}
+.benefit-block-icon.icon-souvenirs {
+    background-image: url(../img/icons/icon-souvenirs.png);
+}
+.benefit-block-image {
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .town-image {
-    background: url("../img/index/benefit-1.jpg") no-repeat center;
-    background-size: 100% auto;
+    background-image: url("../img/index/benefit-1.jpg");
 }
 
 .bridge-image {
-    background: url("../img/index/benefit-2.jpg") no-repeat center;
-    background-size: 100% auto;
+    background-image: url("../img/index/benefit-2.jpg");
 }
 
 .booking {
@@ -171,6 +239,68 @@ h3 {
 
     outline: 1px solid blue; /*вспомогательный стиль*/
 }
+
+/* inner -------------------------------------------- */
+
+
+.filter-field {
+    min-height: 200px;
+
+    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.filter-field-column {
+    box-sizing: border-box;
+    min-height: 200px;
+    float: left;
+
+    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+
+.filter-field-block {
+    box-sizing: border-box;
+    min-height: 200px;
+    float: right;
+
+    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+
+.sort-result {
+    min-height: 100px;
+    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+
+.sort-result-container {
+    float: left;
+
+    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+
+.sort-variant-container {
+    float: left;
+
+    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+
+.sort-order-container {
+    float: right;
+
+    outline: 1px solid blue; /*вспомогательный стиль*/
+
+}
+.result-block {
+    min-height: 100px;
+
+    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+
 
 .main-footer {
   width: 100%;
