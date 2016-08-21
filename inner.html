@@ -5,10 +5,11 @@
 	<meta charset="utf-8">
 	<title>HTML Academy: Седона</title>
 	<link href="css/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 </head>
 
 <body>
-	<div class="container">
+	<div class="container wrapper">
 		<header class="main-header">
 
 			<div class="header-logo">
@@ -30,7 +31,6 @@
 					</li>
 				</ul>
 			</nav>
-
 		</header>
 
 		<main>
@@ -57,7 +57,6 @@
 							<input id="wi-fi" type="checkbox" name="infrastructure" value="wi-fi">
 							<label for="wi-fi">Wi-Fi</label>
 						</p>
-
 					</div>
 
 					<div class="filter-field-column housing">
@@ -78,12 +77,11 @@
 							<input id="apartments" type="checkbox" name="housing" value="apartments" checked>
 							<label for="apartments">Апартаменты</label>
 						</p>
-
 					</div>
 
 					<div class="filter-field-block cost">
 
-						<span>Стоимость в сутки (р):</span>
+						<div>Стоимость в сутки (р):</div>
 
 						<label for="min">от</label>
 						<input id="min" type="text" name="min">
@@ -96,33 +94,35 @@
 							<div class="range-line"></div>
 							<div class="range-runner range-runner-left"></div>
 							<div class="range-runner range-runner-right"></div>
-
 						</div>
 
 						<button type="submit">Показать</button>
-
 					</div>
 				</form>
 			</div>
 
 
+
+
 			<div class="sort-result clearfix">
 
 				<div class="sort-result-container">
-					<span>Найдено: <span>3</span></span>
+					<h3>Найдено: <span>3</span></span>
 				</div>
 
 				<div class="sort-variant-container">
 
 					<span>Сортировка:</span>
 
-					<div class="sort-variant-block"><a href="#">По цене</a></div>
-
-					<div class="sort-variant-block"><a href="#"h>По типу</a></div>
-
-					<div class="sort-variant-block"><a href="#">По рейтингу</a></div>
-
 				</div>
+				<div class="sort-variant-block"><a href="#">По цене</a></div>
+
+				<div class="sort-variant-block"><a href="#">По типу</a></div>
+
+				<div class="sort-variant-block"><a href="#">По рейтингу</a></div>
+			
+
+				
 
 
 				<div class="sort-order-container">
@@ -131,41 +131,56 @@
 					<a href="#">Down</a>								
 				</div>	
 			</div>
+
 			<div class="result-block">
 
-				<div class="result-block-item">
+				<div class="result-block-item clearfix">
 
 					<div class="item-image-block">
 						<img src="img/inner/result-item-1.jpg" width="135" height="90" alt="Amara resort & Spa">
 					</div>
 
-					<div class="item-info-block">
+					<div class="item-info-block clearfix">
 						<h3>Amara resort & SPA</h3>
-						<span class="item-name">Гостиница</span>
-						<span class="item-price">от 3500 Р.</span>
-						<a class="btn btn-information" href="#">Подробнее</a>
-						<a class="btn btn-booking" href="#">Забронировать</a>
+						<div class="item-information">
+							<span>Гостиница</span>
+							<div class="item-btn">
+								<a class="btn" href="#">Подробнее</a>
+							</div>
+						</div>
+						<div class="item-information">
+							<span>от 3500 Р.</span>
+							<div class="item-btn">
+								<a class="btn btn-booking" href="#">Забронировать</a>
+							</div>
+						</div>
 					</div>
 
 					<div class="item-raiting-block">
 						<div class="stars four-star"></div>
 						<span class="raiting">Рейтинг: 8,5</span>
 					</div>
-
 				</div>
 
-				<div class="result-block-item">
+				<div class="result-block-item clearfix">
 
 					<div class="item-image-block">
 						<img src="img/inner/result-item-2.jpg" width="135" height="90" alt="Desert quail inn">
 					</div>
-
-					<div class="item-info-block">
-						<h3>Desert quail inn</h3>
-						<span class="item-name">Мотель</span>
-						<span class="item-price">от 2000 Р.</span>
-						<a class="btn btn-information" href="#">Подробнее</a>
-						<a class="btn btn-booking" href="#">Забронировать</a>
+					<div class="item-info-block clearfix">
+						<h3>Amara resort & SPA</h3>
+						<div class="item-information">
+							<span>Мотель</span>
+							<div class="item-btn">
+								<a class="btn" href="#">Подробнее</a>
+							</div>
+						</div>
+						<div class="item-information">
+							<span>от 2000 Р.</span>
+							<div class="item-btn">
+								<a class="btn btn-booking" href="#">Забронировать</a>
+							</div>
+						</div>
 					</div>
 
 					<div class="item-raiting-block">
@@ -175,29 +190,38 @@
 
 				</div>
 
-				<div class="result-block-item">
+				<div class="result-block-item clearfix">
 
 					<div class="item-image-block">
-						<img src="img/inner/result-item-3.jpg" width="135" height="90" alt="Villas at poco diablo">
+						<img src="img/inner/result-item-3.jpg" width="135" height="90" alt="Desert quail inn">
 					</div>
-
-					<div class="item-info-block">
-						<h3>Villas at poco diablo</h3>
-						<span class="item-name">Апартаменты</span>
-						<span class="item-price">от 4000 Р.</span>
-						<a class="btn btn-information" href="#">Подробнее</a>
-						<a class="btn btn-booking" href="#">Забронировать</a>
+					<div class="item-info-block clearfix">
+						<h3>Amara resort & SPA</h3>
+						<div class="item-information">
+							<span>Аппартаменты</span>
+							<div class="item-btn">
+								<a class="btn" href="#">Подробнее</a>
+							</div>
+						</div>
+						<div class="item-information">
+							<span>от 4000 р.</span>
+						
+							<div class="item-btn">
+								<a class="btn btn-booking" href="#">Забронировать</a>
+							</div>
+						</div>
 					</div>
 
 					<div class="item-raiting-block">
-						<div class="stars three-star"></div>
-						<span class="raiting">Рейтинг: 9,2</span>
+						<div class="stars two-star"></div>
+						<span class="raiting">Рейтинг: 8,5</span>
 					</div>
+
 				</div>
 			</div>
 		</main>
 
-		<footer class="main-footer">
+		<footer class="footer">
 
 			<section class="footer-hashtag">
 				<a href="#" class="hashtag">#Visitsedona</a>
