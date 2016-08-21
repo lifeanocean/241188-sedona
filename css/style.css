@@ -209,28 +209,38 @@ h3 {
 
 /* Benefit ------------------------------------------------- */
 
+.benefit-block-gray {
+    height: 256px;
+}
+
 .benefit-block {
-    padding: 45px 50px;
+    padding: 45px 45px 0;
     text-align: center;
+    min-height: 330px;
     box-sizing: border-box;
 }
 
 .benefit-block .benefit-block-title,
 .benefit-block .benefit-block-icon,
 .benefit-block p {
-    margin-bottom: 20px;
+    margin-bottom: 6%;
 }
-.benefit-block .benefit-block-icon,
+/*.benefit-block .benefit-block-icon,
 .benefit-block img {
     margin-top: 20px;
 }
-.benefit-block.benefit-block-info :last-child {
-    margin-bottom: 0;
+*/
+
+.benefit-block-info {
+    height: 256px;
 }
+/*.benefit-block.benefit-block-info:last-child {
+    margin-bottom: 0;
+}*/
 
 .benefit-block-info {
     background: #81b3d2;
-    max-height: 331px;
+    
 }
 
 .benefit-block-info,
