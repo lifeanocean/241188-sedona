@@ -33,9 +33,10 @@
 			</nav>
 
 		</header>
+		<!-- /Header -->
 
 		<main>
-
+		<!-- Intro -->
 			<div class="welcome-block">
 				<img src="img/index/welcome.png" alt="Welcome to Sedona!" width="458" height="352">
 			</div>
@@ -48,8 +49,10 @@
 					Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!	
 				</p>
 			</section>
+		<!-- /Intro -->
 
-			<section class="benefit">
+		<!-- Benefits -->
+		<section class="benefit">
 				<div class="table-row">
 					<div class="table-cell col-1 benefit-block benefit-block-info">
 						<h3 class="benefit-block-title">Настоящий<br>городок</h3>
@@ -60,18 +63,15 @@
 				</div>
 
 				<div class="row clearfix">
-					<div class="col-1 benefit-block">
-						<div class="benefit-block-icon icon-housing"></div>
+					<div class="col-1 benefit-block icon-housing">
 						<h3 class="benefit-block-title">Жилье</h3>
 						<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
 					</div>
-					<div class="col-1 benefit-block">
-						<div class="benefit-block-icon icon-food"></div>
+					<div class="col-1 benefit-block icon-food">
 						<h3 class="benefit-block-title">Еда</h3>
 						<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
 					</div>
-					<div class="col-1 benefit-block">
-						<div class="benefit-block-icon icon-souvenirs"></div>
+					<div class="col-1 benefit-block icon-souvenirs">
 						<h3 class="benefit-block-title">Сувениры</h3>
 						<p>Не только китайского, но и местного производства!</p>
 					</div>
@@ -104,47 +104,57 @@
 					</div>
 				</div>
 			</section>
+			<!-- Benefits -->
 
+			<!-- Booking -->
 			<section class="booking">
-
 				<div class="booking-header">
 					<h2>Заинтересовались?</h2>
-					<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>	
+					<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 				</div>
-
 
 				<div class="booking-block">
+					<a id="btn_form_open" class="btn btn-brown btn-hotels btn-block" type="button">Поиск гостиницы в Седоне</a>
 
-					<button class="btn btn-booking" type="button">Поиск гостиницы в Седоне</button>
+					<form id="booking_form" action="#" method="get" class="booking-form">
+						<div class="form-row clearfix">
+							<label for="checkin" class="col-quarter">Дата заезда:</label>
+							<div class="calendar col-three-quarters">
+								<input id="checkin" type="date" name="checkin" value="2016-04-24">
+							</div>
+						</div>
 
-					<form action="#" method="get">
+						<div class="form-row clearfix">
+							<label for="checkout" class="col-quarter">Дата выезда:</label>
+							<div class="calendar col-three-quarters">
+								<input id="checkout" type="date" name="checkout" value="2016-07-04">
+							</div>
+						</div>
 
-						<label for="checkin">Дата заезда:</label>
-						<input id="checkin" type="date" name="checkin" value="2016-04-24">
+						<div class="form-row clearfix">
+							<div class="col-half row">
+								<label for="adults" class="col-half">Взрослые:</label>
+								<input id="adults" type="number" name="adults" step="1" value="2" class="col-half text-center">
+							</div>
 
-						<label for="checkout">Дата выезда:</label>
-						<input id="checkout" type="date" name="checkout" value="2016-07-04">
+							<div class="col-half row">
+								<label for="kids" class="col-half text-center">Дети:</label>
+								<input id="kids" type="number" name="kids" step="1" value="0" class="col-half text-center">
+							</div>
+						</div>
 
-						<label for="adults">Взрослые:</label>
-						<input id="adults" type="number" name="adults" step="1" value="2">
-
-						<label for="kids">Дети:</label>
-						<input id="kids" type="number" name="kids" step="1" value="0">
-
-						<button class="btn btn-search" type="submit" name="search-hotels">Найти</button>
-
+						<button class="btn btn-search btn-blue btn-block" type="submit" name="search-hotels">Найти</button>
 					</form>
-
 				</div>
-
 			</section>
-
+			<!-- /Booking -->
+			
 			<div class="map">
-				
+			
 			</div>
 
 		</main>
-
+		<!-- Footer -->
 		<footer class="footer clearfix">
 
 			<section class="footer-hashtag">

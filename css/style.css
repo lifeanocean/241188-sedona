@@ -34,6 +34,7 @@ h2 {
     line-height: 24px;
     color: #000;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
 h3 {
@@ -50,10 +51,50 @@ h3 {
     margin: 0 5pt;
 }
 
+.text-center {
+    text-align: center;
+}
 .bg-gray {
     background: #eee;
 }
 
+.btn {
+    display: inline-block;
+    background: none;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    text-transform: uppercase; 
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.btn-block {
+    width: 100%;
+    display: block;
+}
+
+.btn-search {
+    padding: 15px;
+    margin-top: 55px;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.btn-hotels {
+    padding: 30px;
+    font-size: 21px;
+    line-height: 26px;
+}
+.btn.btn-brown {
+    background: #766357;
+    color: white;
+}
+.btn.btn-blue {
+    color: white;
+    background: #81b3d2;
+}
 .container{
     min-width: 768px;
     max-width: 1200px;
@@ -61,6 +102,40 @@ h3 {
     position: relative;
 }
 
+.table-row {
+    display: table-row;
+}
+.table-cell {
+    display: table-cell;
+}
+
+.col-1 {
+    width: calc(100%/3);
+}
+.col-2 {
+    width: calc(100%/3*2);
+}
+.col-3 {
+    width: 100%;
+    box-sizing: border-box;
+}
+.col-half {
+    width: 50%;
+    box-sizing: border-box;
+}
+.col-quarter {
+    width: 25%;
+    box-sizing: border-box;
+}
+.col-three-quarters {
+    width: 75%;
+    box-sizing: border-box;
+}
+
+.row [class*=col-],
+.form-row [class*=col-] {
+    float: left;
+}
 
 /* Header -------------------------------------------- */
 .main-header {
@@ -98,7 +173,7 @@ h3 {
     font-weight: bold;
 }
 
-/* Into -------------------------------------------- */
+/* Intro -------------------------------------------- */
 
 .welcome-block {
     min-height: 508px;
@@ -134,35 +209,10 @@ h3 {
 
 /* Benefit ------------------------------------------------- */
 
-.table-row {
-    display: table-row;
-    
-}
-
-.table-cell {
-    display: table-cell;
-}
-
-.col-1 {
-    width: calc(100%/3);
-    box-sizing: border-box;
-}
-
-.col-2 {
-    width: calc(100%/3*2);
-    box-sizing: border-box;
-}
-
-.row [class*=col-]{
-    float: left;
-}
-
-.benefit {
-    box-sizing: border-box;
-}
 .benefit-block {
     padding: 45px 50px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .benefit-block .benefit-block-title,
@@ -180,6 +230,7 @@ h3 {
 
 .benefit-block-info {
     background: #81b3d2;
+    max-height: 331px;
 }
 
 .benefit-block-info,
@@ -187,23 +238,45 @@ h3 {
     color: white;
 }
 
-.benefit-block-icon {
+.icon-housing:before {
+    content: "";
     display: inline-block;
     width: 75px;
     height: 75px;
+    background-image: url(../img/icons/icon-housing.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    margin-bottom: 25px;
+    margin-top: 15px;
 }
-.benefit-block-icon.icon-food {
+
+.icon-food:before {
+    content: "";
+    display: inline-block;
+    width: 75px;
+    height: 75px;
     background-image: url(../img/icons/icon-food.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 25px;
+    margin-top: 15px;
 }
-.benefit-block-icon.icon-housing {
-    background-image: url(../img/icons/icon-housing.png);
-}
-.benefit-block-icon.icon-souvenirs {
+
+.icon-souvenirs:before {
+    content: "";
+    display: inline-block;
+    width: 75px;
+    height: 75px;
     background-image: url(../img/icons/icon-souvenirs.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 25px;
+    margin-top: 15px;
 }
+
 .benefit-block-image {
     background-size: 100% auto;
     background-position: center;
@@ -225,25 +298,72 @@ h3 {
     background-image: url("../img/index/benefit-2.jpg");
 }
 
+/* Booking----------------------------- */
+
 .booking {
-
+    width: 568px;
+    margin: 0 auto;
 }
-
-.booking-header {
-    width: 576px;
+.booking .booking-header {
     margin: 0 auto;
     text-align: center;
-    padding-top: 56px;
+    padding: 50px 0;
 
-    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+.booking .booking-block {
+    margin: 0 auto;
+    position: relative;
+}
+.booking .booking-form {
+    box-sizing: border-box;
+    position: absolute;
+    padding: 55px;
+    background: white;
+    width: 100%;
+
+    outline: 1px solid blue;
 }
 
-.booking-block {
-    width: 576px;
-    margin: 0 auto;
-    text-align: center;
+.booking-form .form-row {
+    margin-bottom: 30px;
+}
 
-    outline: 1px solid blue; /*вспомогательный стиль*/
+.booking-form label {
+    font-weight: bold;
+    padding: 5px 0;
+}
+.booking-form input {
+    padding: 5px;
+    font-weight: bold;
+    border: none;
+    background: #eee;
+    height: 38px;
+    box-sizing: border-box;
+}
+
+.booking-form .calendar {
+    background: #eee;
+    position: relative;
+}
+.booking-form .calendar:after {
+    content: "*";
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+.booking-form .calendar input {
+    width: 80%;
+}
+
+
+.map {
+    min-height: 475px;
 }
 
 /* Inner -------------------------------------------- */
@@ -351,6 +471,7 @@ h3 {
 
     outline: 1px solid black; /*вспомогательный стиль*/
 }
+
 
 /* Footer ------------------------------ */
 
