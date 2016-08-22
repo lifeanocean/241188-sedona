@@ -1,7 +1,7 @@
-* {
+/** {
     margin: 0;
     padding: 0;
-}
+}*/
 
 body {
     font-size: 14px;
@@ -9,6 +9,7 @@ body {
     color: #333333;
     font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
     text-transform: uppercase;
+    min-width: 768px;
 }
 
 .wrapper {
@@ -34,6 +35,7 @@ h2 {
     line-height: 24px;
     color: #000;
     font-weight: bold;
+    margin: 0;
     margin-bottom: 30px;
 }
 
@@ -42,13 +44,23 @@ h3 {
     line-height: 26px;
     color: #000;
     font-weight: bold;
+    margin: 0;
+}
+/*
+img, p {
+    margin: 0;
+    padding: 0;
+}*/
+
+a {
+    text-decoration: none;
 }
 
 
 .text-crossed:before,
 .text-crossed:after {
     content: "\2014";
-    margin: 0 5pt;
+    margin: 0 5px;
 }
 
 .text-center {
@@ -138,6 +150,7 @@ h3 {
 }
 
 /* Header -------------------------------------------- */
+
 .main-header {
     position: relative;
 }
@@ -154,6 +167,7 @@ h3 {
 .main-navigation {
     font-size: 0;
     padding: 0;
+    list-style: none;
 }
 .main-navigation li {
     display: inline-block;
@@ -168,7 +182,9 @@ h3 {
 .main-navigation li:nth-child(4n-2){
   margin-right: 20%;
 }
+
 .main-navigation a {
+    display: block;
     color: black;
     font-weight: bold;
 }
@@ -341,7 +357,7 @@ h3 {
 
 .booking-form label {
     font-weight: bold;
-    padding: 5px 0;
+    padding: 8.5px 0;
 }
 .booking-form input {
     padding: 5px;
@@ -385,7 +401,7 @@ h3 {
     min-height: 217px;
     padding:0 6%;
     padding-top: 28px;
-    background: url(../img/inner/bg-filter.jpg) no-repeat  50% 50%;
+    background: url(../img/inner/bg-filter.jpg) no-repeat  50% 55%;
     background-size: cover;
 
     outline: 1px solid green; /*вспомогательный стиль*/
@@ -482,6 +498,10 @@ h3 {
     padding-bottom: 30px;*/
     width: 135px;
     margin-right: 31px;
+}
+
+.item-image-block img {
+    display: block;
 }
 
 .item-info-block {
