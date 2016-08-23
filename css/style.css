@@ -29,9 +29,7 @@ h2 {
     font-size: 30px;
     line-height: 24px;
     color: #000;
-    font-weight: bold;
-    margin: 0;
-    margin-bottom: 30px;
+    font-weight: bold;   
 }
 
 h3 {
@@ -85,8 +83,8 @@ a {
 }
 
 .btn-search {
-    padding: 15px;
-    margin-top: 55px;
+    padding: 16px;
+    margin-top: 54px;
     font-size: 21px;
     line-height: 26px;
 }
@@ -167,12 +165,13 @@ a {
     list-style: none;
 }
 .main-navigation li {
+	font-size: 14px;
+    line-height: 26px;
     display: inline-block;
     padding-top: 15px;
     padding-bottom: 15px;
     width: 20%;
     vertical-align: top;
-    font-size: 14px;
     text-align: center;
 }
 
@@ -184,6 +183,14 @@ a {
     display: block;
     color: black;
     font-weight: bold;
+}
+
+
+.main-navigation a:hover {
+  color: #81b3d2;
+}
+.main-navigation a:active {
+  color: #b2b2b2;
 }
 
 /* Intro -------------------------------------------- */
@@ -209,7 +216,7 @@ a {
     width: 576px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 27px;
+    margin-bottom: 28px;
     line-height: 26px;
 }
 
@@ -217,14 +224,14 @@ a {
     width: 576px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 51px;
+    margin-bottom: 52px;
     line-height: 26px;
 }
 
 /* Benefit ------------------------------------------------- */
 
 .benefit-block {
-    padding: 45px 45px 0;
+    padding: 4% 5% 0;
     text-align: center;
     min-height: 330px;
     box-sizing: border-box;
@@ -234,29 +241,33 @@ a {
     min-height: 256px;
 }
 
+.table-cell .benefit-block {
+	height: 256px;
+}
+
+.benefit-block p {
+	margin: 0;
+}
+
 .benefit-block .benefit-block-title,
 .benefit-block .benefit-block-icon,
 .benefit-block p {
-    margin-bottom: 6%;
+    margin-bottom: 29px;
 }
-/*.benefit-block .benefit-block-icon,
-.benefit-block img {
-    margin-top: 20px;
-}
-*/
+
 
 .benefit-block-info {
     min-height: 256px;
 }
-/*.benefit-block.benefit-block-info:last-child {
-    margin-bottom: 0;
-}*/
+
 
 .benefit-block-info {
     background: #81b3d2;
     
 }
-
+.benefit-block-image {
+	min-height: 256px;
+}
 .benefit-block-info,
 .benefit-block-info .benefit-block-title {
     color: white;
@@ -338,6 +349,13 @@ a {
 .booking-header p {
     margin: 0;
 }
+
+.booking-header h2 {
+	margin: 0;
+    margin-bottom: 31px;
+    padding-top: 8px;
+}
+
 .booking .booking-block {
     margin: 0 auto;
     position: relative;
@@ -358,9 +376,10 @@ a {
 
 .booking-form label {
     font:inherit;
+    line-height: 26px;
     text-transform: inherit;
     font-weight: bold;
-    padding: 8.5px 0;
+    padding: 6px 0;
 }
 .booking-form input {
     font:inherit;
@@ -369,8 +388,8 @@ a {
     font-weight: bold;
     border: none;
     background: #eee;
-    height: 28px;
-    /*box-sizing: border-box;*/
+    height: 38px;
+    box-sizing: border-box;
 }
 
 .booking-form .calendar {
