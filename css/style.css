@@ -239,14 +239,24 @@ a {
 
 .benefit-block-gray {
     min-height: 256px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    padding: 0 40px;
+
 }
 
-.table-cell .benefit-block {
+/*.table-cell .benefit-block {
 	height: 256px;
-}
+}*/
 
 .benefit-block p {
 	margin: 0;
+}
+
+.text-crossed {
+     margin-bottom: 29px;
 }
 
 .benefit-block .benefit-block-title,
@@ -258,13 +268,17 @@ a {
 
 .benefit-block-info {
     min-height: 256px;
-}
-
-
-.benefit-block-info {
     background: #81b3d2;
-    
+    display: flex; 
+    flex-direction: column; 
+    align-content: center; 
+    justify-content: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+
 }
+
+
 .benefit-block-image {
 	min-height: 256px;
 }
