@@ -95,13 +95,34 @@ a {
     line-height: 26px;
 }
 .btn.btn-brown {
-    background: #766357;
+    background-color: #766357;
     color: white;
 }
+
+.btn.btn-brown:hover {
+    background-color: #604e43;
+}
+
+.btn.btn-brown:active {
+    background-color: #503e33;
+    color: rgba(255,255,255,0.3);
+}
+
 .btn.btn-blue {
     color: white;
-    background: #81b3d2;
+    background-color: #81b3d2;
 }
+
+.btn.btn-blue:hover {
+    background-color: #669ec0;
+
+
+}
+.btn.btn-blue:active {
+    background-color: #5496bd;
+    color: rgba(255,255,255,0.3);
+}
+
 .container{
     min-width: 768px;
     max-width: 1200px;
@@ -185,7 +206,6 @@ a {
     font-weight: bold;
 }
 
-
 .main-navigation a:hover {
   color: #81b3d2;
 }
@@ -193,6 +213,7 @@ a {
   color: #b2b2b2;
 }
 
+.main-navigation a:hover 
 /* Intro -------------------------------------------- */
 
 .welcome-block {
@@ -478,17 +499,147 @@ p.text-crossed {
     margin-bottom: 22px;
 }
 
-.filter-field-block {
+/*.filter-field-block {
     box-sizing: border-box;
     min-height: 155px;
     float: right;
     width: 31%;
-
-    outline: 1px solid blue; /*вспомогательный стиль*/
+}
+*/
+.filter-range {
+  float: right;
+  width: 31.2%;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
-.filter-field-block input {
+.filter-range-title {
+  margin-bottom: 9px;
 
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+  
+  height: 36px;
+  margin-bottom: 20px;
+
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 50%;
+  text-align: center;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
 }
 
 /* Sorting -------------------------------------------- */
@@ -526,7 +677,7 @@ p.text-crossed {
     padding: 4px 0;
     font-size: 12px;
     line-height: 18px;
-    color: #b2b2b2;
+
 }
 
 .sort-order-container {
@@ -538,10 +689,22 @@ p.text-crossed {
 
 .sort-variant-block a {
     text-decoration: none;
-    color: #b2b2b2;
+    /*color: #b2b2b2;*/
+    color: rgba(178, 178, 178, 0.3);
     border-bottom: 1px dashed #81b3d2;
 }
 
+.sort-variant-block a:hover {
+    text-decoration: none;
+    color: #c4dcea;
+    opacity: 1;
+}
+
+.sort-variant-block a:active {
+    text-decoration: none;
+    color:inherit;
+    opacity: 1;
+}
 
 /* Results -------------------------------------------- */
 
@@ -609,10 +772,14 @@ p.text-crossed {
 .item-raiting-block {
 
     width: 111px;
+}
+
+.stars {
+    height: 18px;
+    margin-bottom: 46px;
 
     outline: 1px solid blue;
 }
-
 .raiting {
     box-sizing: border-box;
     display: block;
@@ -620,10 +787,7 @@ p.text-crossed {
     padding-top: 3px;
     padding-bottom: 3px;
     text-align: center;
-    /*padding-left: 14px;
-    padding-right: 14px;*/
-
-    outline: 1px solid blue;
+    background-color: #f2f2f2;
 }
 /* Footer ------------------------------ */
 

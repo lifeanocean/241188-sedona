@@ -36,9 +36,9 @@
 
 		<main>
 
-			<div class="filter-field clearfix">
+			<div class="filter-field">
 
-				<form action="#" method="get">
+				<form class="clearfix" action="#" method="get">
 
 					<div class="filter-field-column infrastructure">
 
@@ -80,24 +80,20 @@
 						</p>
 					</div>
 
-					<div class="filter-field-block cost">
-
-						<div>Стоимость в сутки (р):</div>
-
-						<label for="min">от</label>
-						<input id="min" type="text" name="min">
-
-						<label for="max">до</label>   
-						<input id="max" type="text" name="max">
-
-						<div class="range-container">
-
-							<div class="range-line"></div>
-							<div class="range-runner range-runner-left"></div>
-							<div class="range-runner range-runner-right"></div>
+					<div class="filter-range">
+						<div class="filter-range-title">Стоимость в сутки (р):</div>
+						<div class="price-controls">
+							<label class="min-price">от <input type="text" name="min-price" value="0"></label>
+							<label class="max-price">до <input type="text" name="max-price" value="3000"></label>
 						</div>
-
-						<button type="submit">Показать</button>
+						<div class="range-controls">
+							<div class="scale">
+								<div class="bar"></div>
+							</div>
+							<div class="range-toggle range-toggle-min"></div>
+							<div class="range-toggle range-toggle-max"></div>
+						</div>
+						<button class="btn-transparent" type="submit">Показать</button>
 					</div>
 				</form>
 			</div>
@@ -115,15 +111,15 @@
 
 					<span>Сортировка:</span>
 				</div>
-				
-				<div class="sort-variant-block"><a href="#">По цене</a></div>
+
+				<div class="sort-variant-block"><a class="active" href="#">По цене</a></div>
 
 				<div class="sort-variant-block"><a href="#">По типу</a></div>
 
 				<div class="sort-variant-block"><a href="#">По рейтингу</a></div>
-			
 
-				
+
+
 
 
 				<div class="sort-order-container">
@@ -206,7 +202,7 @@
 						</div>
 						<div class="item-information">
 							<span>от 4000 р.</span>
-						
+
 							<div class="item-btn">
 								<a class="btn btn-brown" href="#">Забронировать</a>
 							</div>
