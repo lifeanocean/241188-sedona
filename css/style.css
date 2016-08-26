@@ -235,6 +235,7 @@ color: rgba(96,78,67,.03);
 /* Intro -------------------------------------------- */
 
 .welcome-block {
+    box-sizing: border-box;
     min-height: 508px;
     text-align: center;
     padding-top: 76px;
@@ -519,7 +520,7 @@ p.text-crossed {
 
 
 .map {
-    min-height: 475px;
+    min-height: 473px;
 }
 
 /* Inner -------------------------------------------- */
