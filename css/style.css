@@ -242,6 +242,7 @@ color: rgba(96,78,67,.03);
     background: url("../img/index/mask.png") no-repeat center bottom,
     #8b99a2 url("../img/index/background-main.jpg") no-repeat  50% 40%;
     background-size: auto, cover;
+    background-color: #c0aba3;
     margin-bottom: 58px;
 
 }
@@ -269,7 +270,10 @@ color: rgba(96,78,67,.03);
 }
 
 /* Benefit ------------------------------------------------- */
-
+.benefit h3 {
+    padding: 0;
+    margin: 0;
+}
 .benefit-block {
     padding: 4% 5% 0;
     text-align: center;
@@ -311,8 +315,8 @@ p.text-crossed {
 
 .benefit-block .benefit-block-title,
 .benefit-block-info .benefit-block-title,
-.benefit-block .benefit-block-icon,
-.benefit-block p {
+.benefit-block .benefit-block-icon
+/*.benefit-block p*/ {
     margin-bottom: 29px;
 }
 
@@ -418,6 +422,7 @@ p.text-crossed {
 
 .booking-header h2 {
 	margin: 0;
+    padding: 0;
     margin-bottom: 31px;
     padding-top: 8px;
 }
@@ -467,13 +472,33 @@ p.text-crossed {
     border-color: #e5e5e5;
 } 
 
-.booking-form .persons {
+.booking-form .person-amount {
     position: relative;
+    font-size: 0;
 }
-.booking-form input[type="number"]::before {
+.person-amount input {
+    width: 38px;
+    line-height: 26px;
+    font-size: 14px;
+}
+
+.btn-amount {
+    /*display: block;*/
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    background-color: #eee;
+    position: relative;
+
+    outline: 1px solid blue;
+}
+.booking-form .amount-minus::before {
     content: "";
     display: block;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     vertical-align: middle;
     width: 12px;
     height: 3px;
@@ -482,6 +507,20 @@ p.text-crossed {
     background-repeat: no-repeat;
 }
 
+.booking-form .amount-plus::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: middle;
+    width: 12px;
+    height: 3px;
+    background-position: -207px -54px;
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+}
 
 .booking-form .calendar {
     background: #eee;
@@ -534,12 +573,13 @@ p.text-crossed {
     padding-top: 28px;
     background: url(../img/inner/bg-filter.jpg) no-repeat  50% 55%;
     background-size: cover;
+    background-color: #c0aba3;
 }
 
 .filter-field-column {
     box-sizing: border-box;
     float: left;
-    margin-right: 9.4%;
+    margin-right: 10.8%;
     padding: 0 auto;
     color: white;
 }
@@ -777,6 +817,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 
 }
 
+
 .sort-order-container {
     float: right;
 }
@@ -787,6 +828,10 @@ input[type="checkbox"]:checked:disabled + label::before {
     height: 10px;
     background-image: url(../img/spritesheet.png);
     background-repeat: no-repeat;
+}
+.sort-order-container a:not([href]) {
+     background-position: -26px -5px;
+     cursor: pointer;
 }
 
 .arrow-up {
@@ -827,6 +872,13 @@ input[type="checkbox"]:checked:disabled + label::before {
     opacity: 1;
 }
 
+.sort-variant-block a:not([href]) {
+    text-decoration: none;
+    color: #c4dcea;
+    border: none;
+    opacity: 1;
+    cursor: pointer;
+}
 /* Results -------------------------------------------- */
 
 .result-block-item {
@@ -877,6 +929,7 @@ input[type="checkbox"]:checked:disabled + label::before {
 }
 .item-info-block h3 {
     margin: 0;
+    padding: 0;
     margin-bottom: 6px;
     cursor: pointer;
 }
@@ -938,7 +991,7 @@ input[type="checkbox"]:checked:disabled + label::before {
     box-sizing: border-box;
     display: block;
     width: 111px;
-    height: 27px;
+    min-height: 27px;
     padding-top: 3px;
     padding-bottom: 3px;
     text-align: center;
