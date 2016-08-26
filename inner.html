@@ -14,7 +14,7 @@
 		<header class="main-header">
 
 			<div class="header-logo">
-				<a href="#"><img src="img/logo.png" alt="Sedona-logo" width="138" height="70"></a>
+				<a href="./index.html"><img src="img/logo.png" alt="Sedona-logo" width="138" height="70"></a>
 			</div>
 			<nav>
 				<ul class="main-navigation">
@@ -28,7 +28,7 @@
 						<a href="#">Карта штата</a>
 					</li>
 					<li>
-						<a href="#">Гостиницы</a>
+						<a>Гостиницы</a>
 					</li>
 				</ul>
 			</nav>
@@ -44,40 +44,40 @@
 
 						<div class="filter-title">Инфраструктура:</div>
 
-						<p>
+						
 							<input id="pool" type="checkbox" name="infrastructure" value="pool" checked>
 							<label for="pool">Бассейн</label>
-						</p>
+						
 
-						<p>
-							<input id="parking" type="checkbox" name="infrastructure" value="parking">
+						
+							<input id="parking" type="checkbox" name="infrastructure" value="parking" disabled>
 							<label for="parking">Парковка</label>
-						</p>
+						
 
-						<p>
+						
 							<input id="wi-fi" type="checkbox" name="infrastructure" value="wi-fi">
 							<label for="wi-fi">Wi-Fi</label>
-						</p>
+						
 					</div>
 
 					<div class="filter-field-column housing">
 
 						<div class="filter-title">Тип жилья:</div>
 
-						<p>
+						
 							<input id="hotel" type="checkbox" name="housing" value="hotel" checked>
 							<label for="hotel">Гостиница</label>
-						</p>
+						
 
-						<p>
+						
 							<input id="motel" type="checkbox" name="housing" value="motel" checked>
 							<label for="motel">Мотель</label>
-						</p>
+						
 
-						<p>
+						
 							<input id="apartments" type="checkbox" name="housing" value="apartments" checked>
 							<label for="apartments">Апартаменты</label>
-						</p>
+						
 					</div>
 
 					<div class="filter-range">
@@ -123,9 +123,9 @@
 
 
 				<div class="sort-order-container">
-					<a href="#">Up</a>
+					<a class="arrow-up" href="#"></a>
 
-					<a href="#">Down</a>								
+					<a class="arrow-down" href="#"></a>								
 				</div>	
 			</div>
 
@@ -154,7 +154,7 @@
 					</div>
 
 					<div class="item-raiting-block">
-						<div class="stars four-star"></div>
+						<div class="stars star-4"></div>
 						<span class="raiting">Рейтинг: 8,5</span>
 					</div>
 				</div>
@@ -180,11 +180,10 @@
 						</div>
 					</div>
 
-					<div class="item-raiting-block">
-						<div class="stars two-star"></div>
-						<span class="raiting">Рейтинг: 8,5</span>
-					</div>
-
+					<!-- <div class="item-raiting-block"> -->
+						<div class="stars star-2"></div>
+						<div class="raiting">Рейтинг: 8,5</div>
+					<!-- </div>-->
 				</div>
 
 				<div class="result-block-item clearfix">
@@ -210,7 +209,7 @@
 					</div>
 
 					<div class="item-raiting-block">
-						<div class="stars two-star"></div>
+						<div class="stars star-3"></div>
 						<span class="raiting">Рейтинг: 8,5</span>
 					</div>
 
@@ -230,9 +229,7 @@
 			</section>
 			<section class="footer-copyright">
 				<span>Website by</span>
-				<a href="https://htmlacademy.ru">
-					<img src="img/logo-academy.png" width="113" height="39" alt="htmlacademy.ru">
-				</a>
+				<a href="https://htmlacademy.ru"></a>
 			</section>
 
 		</footer>
