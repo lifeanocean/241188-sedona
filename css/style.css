@@ -75,8 +75,12 @@ a {
     text-decoration: none;
     cursor: pointer;
     box-sizing: border-box;
+
 }
 
+.btn:focus {
+    outline: none;
+}
 .btn-block {
     width: 100%;
     display: block;
@@ -482,11 +486,11 @@ p.text-crossed {
 .person-amount input {
     width: 114px;
     box-sizing: border-box;
-    
     line-height: 26px;
     font-size: 14px;
     padding-left: 38px;
     padding-right: 38px;
+
    
 }
 
