@@ -240,7 +240,7 @@ color: rgba(96,78,67,.03);
     text-align: center;
     padding-top: 76px;
     background: url("../img/index/mask.png") no-repeat center bottom,
-    #8b99a2 url("../img/index/background-main.jpg") no-repeat  50% 40%;
+    #8b99a2 url("../img/index/background-main.jpg") no-repeat  50% 28%;
     background-size: auto, cover;
     background-color: #c0aba3;
     margin-bottom: 58px;
@@ -438,7 +438,6 @@ p.text-crossed {
     background: white;
     width: 100%;
 
-    outline: 1px solid blue;
 }
 
 .booking-form .form-row {
@@ -476,23 +475,33 @@ p.text-crossed {
     position: relative;
     font-size: 0;
 }
+
+.person-amount {
+    position: relative;
+}
 .person-amount input {
-    width: 38px;
+    width: 114px;
+    box-sizing: border-box;
+    
     line-height: 26px;
     font-size: 14px;
+    padding-left: 38px;
+    padding-right: 38px;
+   
 }
 
 .btn-amount {
-    /*display: block;*/
     width: 38px;
     height: 38px;
     padding: 0;
     background-color: #eee;
-    position: relative;
-
-    outline: 1px solid blue;
+    position: absolute;
 }
-.booking-form .amount-minus::before {
+
+.amount-plus {
+    right:0;
+}
+.amount-minus::before {
     content: "";
     display: block;
     position: absolute;
@@ -507,7 +516,15 @@ p.text-crossed {
     background-repeat: no-repeat;
 }
 
-.booking-form .amount-plus::before {
+.amount-minus:hover::before {
+    background-position: -185px -54px;
+}
+
+.amount-minus:active:before {
+    background-position: -163px -54px;
+}
+
+.amount-plus::before {
     content: "";
     display: block;
     position: absolute;
@@ -516,16 +533,25 @@ p.text-crossed {
     transform: translate(-50%, -50%);
     vertical-align: middle;
     width: 12px;
-    height: 3px;
+    height: 11px;
     background-position: -207px -54px;
     background-image: url(../img/spritesheet.png);
     background-repeat: no-repeat;
+}
+
+.amount-plus:hover::before {
+    background-position: -249px -54px;
+}
+
+.amount-plus:active::before {
+    background-position: -228px -54px;
 }
 
 .booking-form .calendar {
     background: #eee;
     position: relative;
 }
+
 .booking-form .calendar::after {
     content: " ";
     /*width: 20%;
@@ -560,6 +586,7 @@ p.text-crossed {
 
 .map {
     min-height: 473px;
+    background-color: #e9e5dc;
 }
 
 /* Inner -------------------------------------------- */
