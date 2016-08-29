@@ -4,16 +4,18 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Седона</title>
+	<link rel="stylesheet" href="css/normalize.css">
 	<link href="css/style.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">	
 </head>
 
 <body>
 	<div class="container wrapper">
+		<!-- Header -->
 		<header class="main-header">
 
 			<div class="header-logo">
-				<a href="#"><img src="img/logo.png" alt="Sedona-logo" width="138" height="70"></a>
+				<a href="./index.html"><img src="img/logo.png" alt="Sedona-logo" width="138" height="70"></a>
 			</div>
 			<nav>
 				<ul class="main-navigation">
@@ -27,110 +29,106 @@
 						<a href="#">Карта штата</a>
 					</li>
 					<li>
-						<a href="#">Гостиницы</a>
+						<a>Гостиницы</a>
 					</li>
 				</ul>
 			</nav>
 		</header>
-
+		<!-- Header -->
 		<main>
+		<!-- Filter -->
+			<div class="filter-field">
 
-			<div class="filter-field clearfix">
-
-				<form action="#" method="get">
+				<form class="clearfix" action="#" method="get">
 
 					<div class="filter-field-column infrastructure">
 
-						<span>Инфраструктура:</span>
+						<div class="filter-title">Инфраструктура:</div>
 
-						<p>
-							<input id="pool" type="checkbox" name="infrastructure" value="pool" checked>
-							<label for="pool">Бассейн</label>
-						</p>
+						
+						<input id="pool" type="checkbox" name="infrastructure" value="pool" checked>
+						<label for="pool">Бассейн</label>
+						
 
-						<p>
-							<input id="parking" type="checkbox" name="infrastructure" value="parking">
-							<label for="parking">Парковка</label>
-						</p>
+						
+						<input id="parking" type="checkbox" name="infrastructure" value="parking" disabled>
+						<label for="parking">Парковка</label>
+						
 
-						<p>
-							<input id="wi-fi" type="checkbox" name="infrastructure" value="wi-fi">
-							<label for="wi-fi">Wi-Fi</label>
-						</p>
+						
+						<input id="wi-fi" type="checkbox" name="infrastructure" value="wi-fi">
+						<label for="wi-fi">Wi-Fi</label>
+						
 					</div>
 
 					<div class="filter-field-column housing">
 
-						<span>Тип жилья:</span>
+						<div class="filter-title">Тип жилья:</div>
 
-						<p>
-							<input id="hotel" type="checkbox" name="housing" value="hotel" checked>
-							<label for="hotel">Гостиница</label>
-						</p>
+						
+						<input id="hotel" type="checkbox" name="housing" value="hotel" checked>
+						<label for="hotel">Гостиница</label>
+						
 
-						<p>
-							<input id="motel" type="checkbox" name="housing" value="motel" checked>
-							<label for="motel">Мотель</label>
-						</p>
+						
+						<input id="motel" type="checkbox" name="housing" value="motel" checked>
+						<label for="motel">Мотель</label>
+						
 
-						<p>
-							<input id="apartments" type="checkbox" name="housing" value="apartments" checked>
-							<label for="apartments">Апартаменты</label>
-						</p>
+						
+						<input id="apartments" type="checkbox" name="housing" value="apartments" checked>
+						<label for="apartments">Апартаменты</label>
+						
 					</div>
 
-					<div class="filter-field-block cost">
-
-						<div>Стоимость в сутки (р):</div>
-
-						<label for="min">от</label>
-						<input id="min" type="text" name="min">
-
-						<label for="max">до</label>   
-						<input id="max" type="text" name="max">
-
-						<div class="range-container">
-
-							<div class="range-line"></div>
-							<div class="range-runner range-runner-left"></div>
-							<div class="range-runner range-runner-right"></div>
+					<div class="filter-range">
+						<div class="filter-range-title">Стоимость в сутки (р):</div>
+						<div class="price-controls">
+							<label class="min-price">от <input type="text" name="min-price" value="0"></label>
+							<label class="max-price">до <input type="text" name="max-price" value="3000"></label>
 						</div>
-
-						<button type="submit">Показать</button>
+						<div class="range-controls">
+							<div class="scale">
+								<div class="bar"></div>
+							</div>
+							<div class="range-toggle range-toggle-min"></div>
+							<div class="range-toggle range-toggle-max"></div>
+						</div>
+						<button class="btn-transparent" type="submit">Показать</button>
 					</div>
 				</form>
 			</div>
+			<!-- Filter -->
 
-
-
+			<!-- Sorting -->
 
 			<div class="sort-result clearfix">
 
 				<div class="sort-result-container">
-					<h3>Найдено: <span>3</span></span>
+					<span>Найдено: <span>3</span></span>
 				</div>
 
 				<div class="sort-variant-container">
 
 					<span>Сортировка:</span>
-
 				</div>
-				<div class="sort-variant-block"><a href="#">По цене</a></div>
+
+				<div class="sort-variant-block"><a>По цене</a></div>
 
 				<div class="sort-variant-block"><a href="#">По типу</a></div>
 
 				<div class="sort-variant-block"><a href="#">По рейтингу</a></div>
-			
-
-				
 
 
 				<div class="sort-order-container">
-					<a href="#">Up</a>
+					<a class="arrow-up"></a>
 
-					<a href="#">Down</a>								
+					<a class="arrow-down" href="#"></a>								
 				</div>	
 			</div>
+			<!-- Sorting -->
+
+			<!-- Hotels -->
 
 			<div class="result-block">
 
@@ -157,7 +155,7 @@
 					</div>
 
 					<div class="item-raiting-block">
-						<div class="stars four-star"></div>
+						<div class="stars star-4"></div>
 						<span class="raiting">Рейтинг: 8,5</span>
 					</div>
 				</div>
@@ -183,11 +181,10 @@
 						</div>
 					</div>
 
-					<div class="item-raiting-block">
-						<div class="stars two-star"></div>
-						<span class="raiting">Рейтинг: 8,5</span>
-					</div>
-
+					<!-- <div class="item-raiting-block"> -->
+						<div class="stars star-2"></div>
+						<div class="raiting">Рейтинг: 8,5</div>
+					<!-- </div>-->
 				</div>
 
 				<div class="result-block-item clearfix">
@@ -205,7 +202,7 @@
 						</div>
 						<div class="item-information">
 							<span>от 4000 р.</span>
-						
+
 							<div class="item-btn">
 								<a class="btn btn-brown" href="#">Забронировать</a>
 							</div>
@@ -213,14 +210,16 @@
 					</div>
 
 					<div class="item-raiting-block">
-						<div class="stars two-star"></div>
+						<div class="stars star-3"></div>
 						<span class="raiting">Рейтинг: 8,5</span>
 					</div>
 
 				</div>
 			</div>
+			<!-- Hotels -->
 		</main>
 
+		<!-- Footer -->
 		<footer class="footer">
 
 			<section class="footer-hashtag">
@@ -233,12 +232,10 @@
 			</section>
 			<section class="footer-copyright">
 				<span>Website by</span>
-				<a href="https://htmlacademy.ru">
-					<img src="img/logo-academy.png" width="113" height="39" alt="htmlacademy.ru">
-				</a>
+				<a href="https://htmlacademy.ru"></a>
 			</section>
-
 		</footer>
+		<!-- Footer -->
 	</div>
 	<script></script>
 </body>

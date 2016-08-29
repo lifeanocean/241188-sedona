@@ -3,8 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Седона</title>
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link href="css/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">	
 </head>
 <body>
 	<div class="container wrapper">
@@ -27,7 +28,7 @@
 						<a href="#">Карта штата</a>
 					</li>
 					<li>
-						<a href="#">Гостиницы</a>
+						<a href="./inner.html">Гостиницы</a>
 					</li>
 				</ul>
 			</nav>
@@ -53,13 +54,23 @@
 
 		<!-- Benefits -->
 		<section class="benefit">
-				<div class="table-row">
+				<!-- <div class="table-row">
 					<div class="table-cell col-1 benefit-block benefit-block-info">
 						<h3 class="benefit-block-title">Настоящий<br>городок</h3>
 						<p class="text-crossed">№1</p>
 						<p>Cедона не атракцион для туристов, там течет своя жизнь</p>
 					</div>
 					<div class="table-cell col-2 benefit-block-image town-image"></div>
+				</div> -->
+
+				<div class="row clearfix">
+					<div class="col-1 benefit-block-info bg-blue">
+						<h3 class="benefit-block-title">Настоящий<br>городок</h3>
+						<p class="text-crossed">№1</p>
+						<p>Cедона не атракцион для туристов, там течет своя жизнь</p>
+					</div>
+					<div class="col-2 benefit-block-image town-image"></div>
+					
 				</div>
 
 				<div class="row clearfix">
@@ -77,27 +88,37 @@
 					</div>
 				</div>
 
-				<div class="table-row">
+				<!-- <div class="table-row">
 					<div class="table-cell col-2 benefit-block-image bridge-image"></div>
 					<div class="table-cell col-1 benefit-block benefit-block-info">
 						<h3 class="benefit-block-title">Там&nbsp;есть<br>мост&nbsp;дьявола</h3>
 						<p class="text-crossed">№2</p>
 						<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 					</div>
+				</div> -->
+
+				<div class="row clearfix">
+					<div class="col-2 benefit-block-image bridge-image"></div>
+					<div class="col-1 benefit-block-info bg-blue">
+						<h3 class="benefit-block-title">Там&nbsp;есть<br>мост&nbsp;дьявола</h3>
+						<p class="text-crossed">№2</p>
+						<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+					</div>
+						
 				</div>
 
 				<div class="row bg-gray clearfix">
-					<div class="col-1 benefit-block">
+					<div class="col-1 benefit-block-info">
 						<h3 class="benefit-block-title">Небольшая<br>площадь</h3>
 						<p class="text-crossed">№3</p>
 						<p>Все достопремечательности находятся&nbsp;очень&nbsp;близко</p>
 					</div>
-					<div class="col-1 benefit-block">
+					<div class="col-1 benefit-block-info">
 						<h3 class="benefit-block-title">Красивая<br>дорога</h3>
 						<p class="text-crossed">№4</p>
 						<p>Ехать&nbsp;в&nbsp;Седону&nbsp;из&nbsp;Лас-Вегаса&nbsp;совсем не&nbsp;скучно!</p>
 					</div>
-					<div class="col-1 benefit-block">
+					<div class="col-1 benefit-block-info">
 						<h3 class="benefit-block-title">Мало<br>туристов</h3>
 						<p class="text-crossed">№5</p>
 						<p>Большинство&nbsp;едет в&nbsp;Гранд&nbsp;Каньон&nbsp;и толпится&nbsp;там</p>
@@ -114,32 +135,40 @@
 				</div>
 
 				<div class="booking-block">
-					<a id="btn_form_open" class="btn btn-brown btn-hotels btn-block" type="button">Поиск гостиницы в Седоне</a>
+					<a id="btn_form_open" class="btn btn-brown btn-hotels btn-block" href="#">Поиск гостиницы в Седоне</a>
 
 					<form id="booking_form" action="#" method="get" class="booking-form">
 						<div class="form-row clearfix">
 							<label for="checkin" class="col-quarter">Дата заезда:</label>
 							<div class="calendar col-three-quarters">
-								<input id="checkin" type="date" name="checkin" value="2016-04-24">
+								<input id="checkin" type="text" name="checkin" value="24 апреля 2016">
 							</div>
 						</div>
 
 						<div class="form-row clearfix">
 							<label for="checkout" class="col-quarter">Дата выезда:</label>
 							<div class="calendar col-three-quarters">
-								<input id="checkout" type="date" name="checkout" value="2016-07-04">
+								<input id="checkout" type="text" name="checkout" value="4 июля 2016">
 							</div>
 						</div>
 
 						<div class="form-row clearfix">
 							<div class="col-half row">
 								<label for="adults" class="col-half">Взрослые:</label>
-								<input id="adults" type="number" name="adults" step="1" value="2" class="col-half text-center">
+								<div class="person-amount">
+									<button class="btn btn-amount amount-minus" type="button"></button>
+									<input id="adults" type="text" name="adults" step="1" value="2" class="text-center">
+									<button class="btn btn-amount amount-plus" type="button"></button>
+								</div>
 							</div>
 
 							<div class="col-half row">
 								<label for="kids" class="col-half text-center">Дети:</label>
-								<input id="kids" type="number" name="kids" step="1" value="0" class="col-half text-center">
+								<div class="person-amount">
+									<button class="btn btn-amount amount-minus" type="button"></button>
+									<input id="kids" type="text" name="kids" step="1" value="0" class="text-center">
+									<button class="btn btn-amount amount-plus" type="button"></button>
+								</div>
 							</div>
 						</div>
 
@@ -149,10 +178,9 @@
 			</section>
 			<!-- /Booking -->
 			
-			<div class="map">
-			
-			</div>
-
+			<!-- Map -->
+			<div class="map"></div>
+			<!-- Map -->
 		</main>
 		<!-- Footer -->
 		<footer class="footer clearfix">
@@ -167,9 +195,7 @@
 			</section>
 			<section class="footer-copyright">
 				<span>Website by</span>
-				<a href="https://htmlacademy.ru">
-					<img src="img/logo-academy.png" width="113" height="39" alt="htmlacademy.ru">
-				</a>
+				<a href="https://htmlacademy.ru"></a>
 			</section>
 		</footer>
 	</div>
