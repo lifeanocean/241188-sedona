@@ -37,11 +37,11 @@ body
 {
     from
     {
-        transform: translateY(-386px);
+        transform: translate(-50%,-386px);
     }
     to
     {
-        transform: translateY(0);
+        transform: translate(-50%,0);
     }
 }
 
@@ -527,6 +527,10 @@ p.text-crossed
 
 .booking-form
 {
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+
     display: none;
 
     box-sizing: border-box;
@@ -534,11 +538,10 @@ p.text-crossed
     margin: 0 auto;
     padding: 55px;
 
+    transform: translateX(-50%);
+
     background: white;
     box-shadow: 0 7px 15px .00px rgba(0, 1, 1, .15);
-
-    position: relative;
-    z-index: 1000;
 }
 
 .modal-content-show
@@ -731,6 +734,9 @@ p.text-crossed
 
 .map
 {
+    position: relative;
+    z-index: 100;
+
     overflow: hidden;
 
     min-height: 593px;
@@ -738,9 +744,6 @@ p.text-crossed
     background-image: url(../img/index/map.jpg);
     background-repeat: no-repeat;
     background-position: center;
-
-    position: relative;
-    z-index: 100;
 }
 
 /* Inner -------------------------------------------- */
