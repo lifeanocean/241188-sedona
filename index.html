@@ -126,14 +126,14 @@
 						<div class="form-row clearfix">
 							<label for="checkin" class="col-quarter">Дата заезда:</label>
 							<div class="calendar col-three-quarters">
-								<input id="checkin" type="text" name="checkin" value="24 апреля 2016">
+								<input id="checkin" type="text" name="checkin" placeholder="24 апреля 2016">
 							</div>
 						</div>
 
 						<div class="form-row clearfix">
 							<label for="checkout" class="col-quarter">Дата выезда:</label>
 							<div class="calendar col-three-quarters">
-								<input id="checkout" type="text" name="checkout" value="4 июля 2016">
+								<input id="checkout" type="text" name="checkout" placeholder="4 июля 2016">
 							</div>
 						</div>
 
@@ -142,7 +142,7 @@
 								<label for="adults" class="col-half">Взрослые:</label>
 								<div class="person-amount">
 									<button class="btn btn-amount amount-minus" type="button"></button>
-									<input id="adults" type="text" name="adults" step="1" value="2" class="text-center">
+									<input id="adults" type="text" name="adults" step="1" placeholder="2" class="text-center">
 									<button class="btn btn-amount amount-plus" type="button"></button>
 								</div>
 							</div>
@@ -151,7 +151,7 @@
 								<label for="kids" class="col-half text-center">Дети:</label>
 								<div class="person-amount">
 									<button class="btn btn-amount amount-minus" type="button"></button>
-									<input id="kids" type="text" name="kids" step="1" value="0" class="text-center">
+									<input id="kids" type="text" name="kids" step="1" placeholder="0" class="text-center">
 									<button class="btn btn-amount amount-plus" type="button"></button>
 								</div>
 							</div>
@@ -185,10 +185,32 @@
 
       var popup = document.querySelector(".booking-form");
 
-      link.addEventListener("click", function(event) 
-      {
+      var arrival = popup.querySelector("[name=checkin]")
+
+      var departure = popup.querySelector("[name=checkout]")
+
+      var kids = popup.querySelector("[name=kids")
+
+      var adults = popup.querySelector("[name=adults")
+
+       link.addEventListener("click", function(event) {
         event.preventDefault();
-        popup.classList.toggle("modal-content-show");
+        popup.classList.toggle("modal-content-show"); 
+      });
+
+      popup.addEventListener("submit", function(event) {
+        if (!arrival.value || !departure.value || !adults.value || !kids.value) {
+          event.preventDefault();
+          console.log("выберите параметры заказа");
+        }
+      });
+
+       window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (popup.classList.contains("modal-content-show")) {
+            popup.classList.remove("modal-content-show");
+          }
+        }
       });
     </script>
 </body>
