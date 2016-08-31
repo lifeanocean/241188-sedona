@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>HTML Academy: Седона</title>
+	<title>Седона</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">	
@@ -32,7 +32,6 @@
 					</li>
 				</ul>
 			</nav>
-
 		</header>
 		<!-- /Header -->
 
@@ -54,14 +53,6 @@
 
 		<!-- Benefits -->
 		<section class="benefit">
-				<!-- <div class="table-row">
-					<div class="table-cell col-1 benefit-block benefit-block-info">
-						<h3 class="benefit-block-title">Настоящий<br>городок</h3>
-						<p class="text-crossed">№1</p>
-						<p>Cедона не атракцион для туристов, там течет своя жизнь</p>
-					</div>
-					<div class="table-cell col-2 benefit-block-image town-image"></div>
-				</div> -->
 
 				<div class="row clearfix">
 					<div class="col-1 benefit-block-info bg-blue">
@@ -70,7 +61,6 @@
 						<p>Cедона не атракцион для туристов, там течет своя жизнь</p>
 					</div>
 					<div class="col-2 benefit-block-image town-image"></div>
-					
 				</div>
 
 				<div class="row clearfix">
@@ -88,23 +78,13 @@
 					</div>
 				</div>
 
-				<!-- <div class="table-row">
-					<div class="table-cell col-2 benefit-block-image bridge-image"></div>
-					<div class="table-cell col-1 benefit-block benefit-block-info">
-						<h3 class="benefit-block-title">Там&nbsp;есть<br>мост&nbsp;дьявола</h3>
-						<p class="text-crossed">№2</p>
-						<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-					</div>
-				</div> -->
-
 				<div class="row clearfix">
 					<div class="col-2 benefit-block-image bridge-image"></div>
 					<div class="col-1 benefit-block-info bg-blue">
 						<h3 class="benefit-block-title">Там&nbsp;есть<br>мост&nbsp;дьявола</h3>
 						<p class="text-crossed">№2</p>
 						<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-					</div>
-						
+					</div>		
 				</div>
 
 				<div class="row bg-gray clearfix">
@@ -135,9 +115,14 @@
 				</div>
 
 				<div class="booking-block">
-					<a id="btn_form_open" class="btn btn-brown btn-hotels btn-block" href="#">Поиск гостиницы в Седоне</a>
-
-					<form id="booking_form" action="#" method="get" class="booking-form">
+					<a id="btn_form_open" class="btn btn-brown btn-hotels btn-block" href="#">Поиск гостиницы в Седоне</a>	
+				</div>
+			</section>
+			<!-- /Booking -->
+			
+			<!-- Map -->
+			<div id="yandex-map" class="map">
+				<form id="booking_form" action="#" method="get" class="booking-form">
 						<div class="form-row clearfix">
 							<label for="checkin" class="col-quarter">Дата заезда:</label>
 							<div class="calendar col-three-quarters">
@@ -174,12 +159,7 @@
 
 						<button class="btn btn-search btn-blue btn-block" type="submit" name="search-hotels">Найти</button>
 					</form>
-				</div>
-			</section>
-			<!-- /Booking -->
-			
-			<!-- Map -->
-			<div class="map"></div>
+			</div>
 			<!-- Map -->
 		</main>
 		<!-- Footer -->
@@ -199,12 +179,14 @@
 			</section>
 		</footer>
 	</div>
+	<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=5GrweTj6CAOk6PqMlUgijLcMt1Umcbmt&amp;width=100%&amp;height=593&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&amp;id=yandex-map"></script>
 	<script>
       var link = document.querySelector(".btn-hotels");
 
       var popup = document.querySelector(".booking-form");
 
-      link.addEventListener("click", function(event) {
+      link.addEventListener("click", function(event) 
+      {
         event.preventDefault();
         popup.classList.toggle("modal-content-show");
       });
