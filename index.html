@@ -183,7 +183,7 @@
 			<!-- Map -->
 		</main>
 		<!-- Footer -->
-		<footer class="footer clearfix">
+		<footer class="footer footer-main clearfix">
 
 			<section class="footer-hashtag">
 				<a href="#" class="hashtag">#Visitsedona</a>
@@ -199,6 +199,15 @@
 			</section>
 		</footer>
 	</div>
-	<script></script>
+	<script>
+      var link = document.querySelector(".btn-hotels");
+
+      var popup = document.querySelector(".booking-form");
+
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.toggle("modal-content-show");
+      });
+    </script>
 </body>
 </html>
