@@ -9,6 +9,7 @@ body
     text-transform: uppercase;
 
     color: #333;
+    background-color: #f2f2f2;
 }
 
 .wrapper
@@ -33,15 +34,31 @@ body
     content: '';
 }
 
+@-webkit-keyframes slide
+{
+    from
+    {
+        -webkit-transform: translate(-50%,-386px);
+                transform: translate(-50%,-386px);
+    }
+    to
+    {
+        -webkit-transform: translate(-50%,0);
+                transform: translate(-50%,0);
+    }
+}
+
 @keyframes slide
 {
     from
     {
-        transform: translate(-50%,-386px);
+        -webkit-transform: translate(-50%,-386px);
+                transform: translate(-50%,-386px);
     }
     to
     {
-        transform: translate(-50%,0);
+        -webkit-transform: translate(-50%,0);
+                transform: translate(-50%,0);
     }
 }
 
@@ -222,7 +239,9 @@ h3
     width: 138px;
     height: 70px;
 
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+
+            transform: translateX(-50%);
     vertical-align: top;
 }
 
@@ -386,8 +405,13 @@ p.text-crossed
 
 .benefit-block-info
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
     box-sizing: border-box;
     min-height: 256px;
@@ -395,14 +419,14 @@ p.text-crossed
 
     text-align: center;
 
-    align-items: center;
-    justify-content: center;
-}
+    -webkit-box-align: center;
 
+        -ms-flex-align: center;
 
-.benefit-block-image
-{
-    min-height: 256px;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .icon-housing::before
@@ -461,6 +485,9 @@ p.text-crossed
 
 .benefit-block-image
 {
+    min-height: 256px;
+
+    background-color: #81b3d2;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% auto;
@@ -538,7 +565,9 @@ p.text-crossed
     margin: 0 auto;
     padding: 55px;
 
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+
+            transform: translateX(-50%);
 
     background: white;
     box-shadow: 0 7px 15px .00px rgba(0, 1, 1, .15);
@@ -548,7 +577,9 @@ p.text-crossed
 {
     display: block;
 
-    animation: slide .6s;
+    -webkit-animation: slide .6s;
+
+            animation: slide .6s;
 }
 
 .booking-form .form-row
@@ -645,7 +676,8 @@ p.text-crossed
     height: 3px;
 
     content: '';
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     vertical-align: middle;
 
     background-image: url(../img/spritesheet.png);
@@ -675,7 +707,8 @@ p.text-crossed
     height: 11px;
 
     content: '';
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     vertical-align: middle;
 
     background-image: url(../img/spritesheet.png);
@@ -878,7 +911,8 @@ input[type='checkbox']:checked:disabled + label::before
     height: 22px;
 
     content: '';
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 
     background: #fff;
 }
@@ -1074,7 +1108,8 @@ input[type='checkbox']:checked:disabled + label::before
 
 .arrow-down
 {
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
 
     background-position: -5px -5px;
 }
@@ -1309,6 +1344,11 @@ input[type='checkbox']:checked:disabled + label::before
     line-height: 21px;
 }
 
+.footer-copyright a 
+{
+    font-size: 0;
+}
+
 .social-btn
 {
     font-size: 0;
@@ -1344,7 +1384,8 @@ input[type='checkbox']:checked:disabled + label::before
     display: block;
 
     content: '';
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 
     background-image: url(../img/spritesheet.png);
     background-repeat: no-repeat;
