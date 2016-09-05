@@ -180,53 +180,6 @@
 		</footer>
 	</div>
 	<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=5GrweTj6CAOk6PqMlUgijLcMt1Umcbmt&amp;width=100%&amp;height=593&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&amp;id=yandex-map"></script>
-	<script>
-      var link = document.querySelector(".btn-hotels");
-
-      var popup = document.querySelector(".booking-form");
-
-      var arrival = popup.querySelector("[name=checkin]")
-
-      var departure = popup.querySelector("[name=checkout]")
-
-      var kids = popup.querySelector("[name=kids")
-
-      var adults = popup.querySelector("[name=adults")
-
-      var storage_kids = localStorage.getItem("kids");
-
-      var storage_adults = localStorage.getItem("adults");
-
-       link.addEventListener("click", function(event) {
-        event.preventDefault();
-        popup.classList.toggle("modal-content-show"); 
-
-         if (storage_kids) {
-          kids.value = storage_kids;
-        }
-
-        if (storage_adults) {
-          adults.value = storage_adults;
-        }
-      });
-
-      popup.addEventListener("submit", function(event) {
-        if (!arrival.value || !departure.value || !adults.value || !kids.value) {
-          event.preventDefault();
-          console.log("выберите параметры заказа");
-        } else {
-          localStorage.setItem("kids", kids.value);
-          localStorage.setItem("adults", adults.value);
-        }
-      });
-
-       window.addEventListener("keydown", function(event) {
-        if (event.keyCode === 27) {
-          if (popup.classList.contains("modal-content-show")) {
-            popup.classList.remove("modal-content-show");
-          }
-        }
-      });
-    </script>
+	<script src="js/popup.js"></script>
 </body>
 </html>

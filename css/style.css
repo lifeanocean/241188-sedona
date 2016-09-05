@@ -874,10 +874,12 @@ input[type='checkbox']:checked:disabled + label::before
 
     width: 31.2%;
 
+    text-align: center;
     text-transform: uppercase;
 
     color: #fff;
 }
+
 
 .filter-range-title
 {
@@ -1007,7 +1009,7 @@ input[type='checkbox']:checked:disabled + label::before
     font-size: 14px;
     line-height: 20px;
 
-    display: block;
+    display: inline-block;
 
     margin: 0 auto;
     padding: 6px 35px;
