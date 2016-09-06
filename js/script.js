@@ -14,6 +14,12 @@ var storage_kids = localStorage.getItem("kids");
 
 var storage_adults = localStorage.getItem("adults");
 
+var filter_link = document.querySelector(".btn-transparent");
+
+var form = document.querySelector(".filter-form");
+
+if (popup) {
+
 link.addEventListener("click", function(event) {
     event.preventDefault();
     popup.classList.toggle("modal-content-show"); 
@@ -44,3 +50,14 @@ window.addEventListener("keydown", function(event) {
         }
     }
 });
+
+}
+
+if (filter_link) {
+
+filter_link.addEventListener("click", function(event) {
+    event.preventDefault();
+    form.submit();
+});
+
+}
