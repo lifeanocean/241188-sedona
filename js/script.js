@@ -1,6 +1,10 @@
-var link = document.querySelector(".btn-hotels");
-
 var popup = document.querySelector(".booking-form");
+
+var form = document.querySelector(".filter-form");
+
+if (popup) {
+
+var link = document.querySelector(".btn-hotels");
 
 var arrival = popup.querySelector("[name=checkin]")
 
@@ -44,3 +48,16 @@ window.addEventListener("keydown", function(event) {
         }
     }
 });
+
+}
+
+if (form) {
+
+var filter_link = document.querySelector(".btn-transparent");
+
+filter_link.addEventListener("click", function(event) {
+    event.preventDefault();
+    form.submit();
+});
+
+}

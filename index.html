@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Седона</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic" rel="stylesheet">	
 </head>
 <body>
@@ -36,7 +36,7 @@
 		<!-- /Header -->
 
 		<main>
-		<!-- Intro -->
+			<!-- Intro -->
 			<div class="welcome-block">
 				<img src="img/index/welcome.png" alt="Welcome to Sedona!" width="458" height="352">
 			</div>
@@ -49,10 +49,10 @@
 					Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!	
 				</p>
 			</div>
-		<!-- /Intro -->
+			<!-- /Intro -->
 
-		<!-- Benefits -->
-		<section class="benefit">
+			<!-- Benefits -->
+			<section class="benefit">
 
 				<div class="row clearfix">
 					<div class="col-1 benefit-block-info bg-blue">
@@ -119,46 +119,46 @@
 				</div>
 			</section>
 			<!-- /Booking -->
-			
+
 			<!-- Map -->
 			<div id="yandex-map" class="map">
-				<form id="booking_form" action="#" method="get" class="booking-form">
-						<div class="form-row clearfix">
-							<label for="checkin" class="col-quarter">Дата заезда:</label>
-							<div class="calendar col-three-quarters">
-								<input id="checkin" type="text" name="checkin" placeholder="24 апреля 2016">
+				<form id="booking_form" class="booking-form" action="#" method="get">
+					<div class="form-row clearfix">
+						<label for="checkin" class="col-quarter">Дата заезда:</label>
+						<div class="calendar col-three-quarters">
+							<input id="checkin" type="text" name="checkin" placeholder="24 апреля 2016">
+						</div>
+					</div>
+
+					<div class="form-row clearfix">
+						<label for="checkout" class="col-quarter">Дата выезда:</label>
+						<div class="calendar col-three-quarters">
+							<input id="checkout" type="text" name="checkout" placeholder="4 июля 2016">
+						</div>
+					</div>
+
+					<div class="form-row clearfix">
+						<div class="col-half row">
+							<label for="adults" class="col-half">Взрослые:</label>
+							<div class="person-amount">
+								<button class="btn btn-amount amount-minus" type="button"></button>
+								<input id="adults" type="text" name="adults" placeholder="2" class="text-center">
+								<button class="btn btn-amount amount-plus" type="button"></button>
 							</div>
 						</div>
 
-						<div class="form-row clearfix">
-							<label for="checkout" class="col-quarter">Дата выезда:</label>
-							<div class="calendar col-three-quarters">
-								<input id="checkout" type="text" name="checkout" placeholder="4 июля 2016">
+						<div class="col-half row">
+							<label for="kids" class="col-half text-center">Дети:</label>
+							<div class="person-amount">
+								<button class="btn btn-amount amount-minus" type="button"></button>
+								<input id="kids" type="text" name="kids" placeholder="0" class="text-center">
+								<button class="btn btn-amount amount-plus" type="button"></button>
 							</div>
 						</div>
+					</div>
 
-						<div class="form-row clearfix">
-							<div class="col-half row">
-								<label for="adults" class="col-half">Взрослые:</label>
-								<div class="person-amount">
-									<button class="btn btn-amount amount-minus" type="button"></button>
-									<input id="adults" type="text" name="adults" step="1" placeholder="2" class="text-center">
-									<button class="btn btn-amount amount-plus" type="button"></button>
-								</div>
-							</div>
-
-							<div class="col-half row">
-								<label for="kids" class="col-half text-center">Дети:</label>
-								<div class="person-amount">
-									<button class="btn btn-amount amount-minus" type="button"></button>
-									<input id="kids" type="text" name="kids" step="1" placeholder="0" class="text-center">
-									<button class="btn btn-amount amount-plus" type="button"></button>
-								</div>
-							</div>
-						</div>
-
-						<button class="btn btn-search btn-blue btn-block" type="submit" name="search-hotels">Найти</button>
-					</form>
+					<button class="btn btn-search btn-blue btn-block" type="submit" name="search-hotels">Найти</button>
+				</form>
 			</div>
 			<!-- Map -->
 		</main>
@@ -180,6 +180,6 @@
 		</footer>
 	</div>
 	<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=5GrweTj6CAOk6PqMlUgijLcMt1Umcbmt&amp;width=100%&amp;height=593&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&amp;id=yandex-map"></script>
-	<script src="js/popup.js"></script>
+	<script src="js/script.min.js"></script>
 </body>
 </html>
