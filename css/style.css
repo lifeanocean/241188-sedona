@@ -558,7 +558,7 @@ p.text-crossed
     z-index: 1000;
     left: 50%;
 
-    display: none;
+   /* display: block;*/
 
     box-sizing: border-box;
     width: 568px;
@@ -572,6 +572,12 @@ p.text-crossed
     background: white;
     box-shadow: 0 7px 15px .00px rgba(0, 1, 1, .15);
 }
+
+.modal-content-hide {
+
+    display: none;
+}
+
 
 .modal-content-show
 {

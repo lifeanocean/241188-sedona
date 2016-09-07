@@ -18,9 +18,12 @@ var storage_kids = localStorage.getItem("kids");
 
 var storage_adults = localStorage.getItem("adults");
 
+popup.classList.add("modal-content-hide")
+
 link.addEventListener("click", function(event) {
     event.preventDefault();
-    popup.classList.toggle("modal-content-show"); 
+    popup.classList.toggle("modal-content-show");
+    popup.classList.toggle("modal-content-hide"); 
 
     if (storage_kids) {
         kids.value = storage_kids;
