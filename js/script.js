@@ -1,6 +1,10 @@
-var link = document.querySelector(".btn-hotels");
-
 var popup = document.querySelector(".booking-form");
+
+var form = document.querySelector(".filter-form");
+
+if (popup) {
+
+var link = document.querySelector(".btn-hotels");
 
 var arrival = popup.querySelector("[name=checkin]")
 
@@ -10,19 +14,20 @@ var kids = popup.querySelector("[name=kids")
 
 var adults = popup.querySelector("[name=adults")
 
-var storage_kids = localStorage.getItem("kids");
+if (localStorage) { 
 
-var storage_adults = localStorage.getItem("adults");
+var storage_kids = localStorage.getItem("kids"); 
 
-var filter_link = document.querySelector(".btn-transparent");
+var storage_adults = localStorage.getItem("adults"); 
 
-var form = document.querySelector(".filter-form");
+}
 
-if (popup) {
+popup.classList.add("modal-content-hide")
 
 link.addEventListener("click", function(event) {
     event.preventDefault();
-    popup.classList.toggle("modal-content-show"); 
+    popup.classList.toggle("modal-content-show");
+    popup.classList.toggle("modal-content-hide"); 
 
     if (storage_kids) {
         kids.value = storage_kids;
@@ -53,7 +58,9 @@ window.addEventListener("keydown", function(event) {
 
 }
 
-if (filter_link) {
+if (form) {
+
+var filter_link = document.querySelector(".btn-transparent");
 
 filter_link.addEventListener("click", function(event) {
     event.preventDefault();
