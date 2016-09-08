@@ -62,16 +62,9 @@ body
     }
 }
 
-h2
-{
-    font-size: 30px;
-    font-weight: bold;
-    line-height: 24px;
 
-    color: #000;
-}
 
-h3
+h1
 {
     font-size: 21px;
     font-weight: bold;
@@ -80,6 +73,14 @@ h3
     color: #000;
 }
 
+h2
+{
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 26px;
+
+    color: #000;
+}
 .text-crossed::before,
 .text-crossed::after
 {
@@ -240,7 +241,6 @@ h3
     height: 70px;
 
     -webkit-transform: translateX(-50%);
-
             transform: translateX(-50%);
     vertical-align: top;
 }
@@ -359,7 +359,7 @@ h3
 
 /* Benefit ------------------------------------------------- */
 
-.benefit h3
+.benefit h2
 {
     margin: 0;
     padding: 0;
@@ -403,15 +403,17 @@ p.text-crossed
     margin-bottom: 29px;
 }
 
+.benefit-block-info h2
+{
+    max-width: 151px;
+}
+
 .benefit-block-info
 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        flex-direction: column;
 
     box-sizing: border-box;
     min-height: 256px;
@@ -419,14 +421,27 @@ p.text-crossed
 
     text-align: center;
 
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     -webkit-box-align: center;
-
-        -ms-flex-align: center;
-
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.benefit > .row
+{
+    display: flex;
+}
+
+.benefit-block-info > *
+{
+    display: block;
+
+    max-width: 100%;
 }
 
 .icon-housing::before
@@ -539,12 +554,20 @@ p.text-crossed
     margin: 0;
 }
 
-.booking-header h2
+.booking-header b
 {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 24px;
+
+    display: block;
+
     margin: 0;
     margin-bottom: 31px;
     padding: 0;
     padding-top: 8px;
+
+    color: #000;
 }
 
 .booking .booking-block
@@ -557,8 +580,7 @@ p.text-crossed
     position: absolute;
     z-index: 1000;
     left: 50%;
-
-   /* display: block;*/
+    /* display: block;*/
 
     box-sizing: border-box;
     width: 568px;
@@ -566,15 +588,14 @@ p.text-crossed
     padding: 55px;
 
     -webkit-transform: translateX(-50%);
-
             transform: translateX(-50%);
 
     background: white;
     box-shadow: 0 7px 15px .00px rgba(0, 1, 1, .15);
 }
 
-.modal-content-hide {
-
+.modal-content-hide
+{
     display: none;
 }
 
@@ -584,7 +605,6 @@ p.text-crossed
     display: block;
 
     -webkit-animation: slide .6s;
-
             animation: slide .6s;
 }
 
@@ -635,24 +655,24 @@ p.text-crossed
 }
 
 .booking-form input::-webkit-input-placeholder
- { 
-    opacity: 1;
-    color: #000;
-}
-
-.booking-form input::-moz-placeholder 
- {
-    opacity: 1;
-    color: #000;
-}
-
-.booking-form input:-moz-placeholder 
 {
     opacity: 1;
     color: #000;
 }
 
-.booking-form input:-ms-input-placeholder 
+.booking-form input::-moz-placeholder
+{
+    opacity: 1;
+    color: #000;
+}
+
+.booking-form input:-moz-placeholder
+{
+    opacity: 1;
+    color: #000;
+}
+
+.booking-form input:-ms-input-placeholder
 {
     opacity: 1;
     color: #000;
@@ -972,15 +992,18 @@ input[type='checkbox']:checked:disabled + label::before
 .price-controls input
 {
     font: inherit;
+    line-height: 38px;
 
-    width: 50px;
-    margin: 0;
+    box-sizing: border-box;
+    min-height: 38px;
+    /*margin: 0;*/
 
     color: inherit;
     border: none;
     outline: none;
     background: none;
 }
+
 
 .range-controls
 {
@@ -1241,7 +1264,7 @@ input[type='checkbox']:checked:disabled + label::before
     margin-right: 6px;
 }
 
-.item-info-block h3
+.item-info-block h2
 {
     margin: 0;
     margin-bottom: 6px;
@@ -1250,12 +1273,12 @@ input[type='checkbox']:checked:disabled + label::before
     cursor: pointer;
 }
 
-.item-info-block h3:hover
+.item-info-block h2:hover
 {
     color: #89b8d5;
 }
 
-.item-info-block h3:active
+.item-info-block h2:active
 {
     color: rgba(0,0,0,.3);
 }
@@ -1352,7 +1375,7 @@ input[type='checkbox']:checked:disabled + label::before
 {
     display: inline-block;
 
-    width: calc(100%/3);
+    width: 33.33%;
 
     text-align: center;
     vertical-align: middle;
@@ -1377,7 +1400,7 @@ input[type='checkbox']:checked:disabled + label::before
     line-height: 21px;
 }
 
-.footer-copyright a 
+.footer-copyright a
 {
     font-size: 0;
 

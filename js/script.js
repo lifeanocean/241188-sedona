@@ -14,9 +14,13 @@ var kids = popup.querySelector("[name=kids")
 
 var adults = popup.querySelector("[name=adults")
 
-var storage_kids = localStorage.getItem("kids");
+if (localStorage) { 
 
-var storage_adults = localStorage.getItem("adults");
+var storage_kids = localStorage.getItem("kids"); 
+
+var storage_adults = localStorage.getItem("adults"); 
+
+}
 
 popup.classList.add("modal-content-hide")
 
